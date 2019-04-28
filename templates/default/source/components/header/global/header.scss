@@ -1,0 +1,16 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+
+	.header-inner & {
+		flex-direction: row-reverse;
+	}
+
+	&__logo {
+
+	}
+
+	&__phone {
+
+	}
+}

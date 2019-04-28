@@ -1,0 +1,84 @@
+{% macro check(class="", text="",name="", value="", req="", checked="") %}
+
+<label class="checkbox {{ class }}__checkbox">
+	<input type="checkbox" class="checkbox__input"  name="{{ name }}" value="{{ value }}" {{ checked }} {{ req }}>
+	<span class="checkbox__icon"></span>
+	<span class="checkbox__text">{{ text }}</span>
+</label>
+<!-- /.checkbox -->
+
+{% endmacro %}
+
+{% macro advantage(img="", img@2x="", img@3x="", title="", text="") %}
+
+<div class="advantage__col">
+	<div class="advantage__pic">
+		<img src="{{ img }}" srcset="{{ img@2x }} 2x, {{ img@3x }} 3x" alt="" class="advantage__img lazyload">
+		<!-- /.advantage__img -->
+	</div>
+	<!-- /.advantage__pic -->
+	<div class="advantage__title">{{ title }}</div>
+	<!-- /.advantage__title -->
+	<div class="advantage__text">{{ text }}</div>
+	<!-- /.advantage__text -->
+</div>
+<!-- /.advantage__col -->
+
+{% endmacro %}
+
+{% macro advantage2(img="", title="", text="") %}
+
+<div class="advantage__col">
+	<div class="advantage__pic">
+		<img src="{{ img }}" alt="" class="advantage__img lazyload">
+		<!-- /.advantage__img -->
+	</div>
+	<!-- /.advantage__pic -->
+	<div class="advantage__title">{{ title }}</div>
+	<!-- /.advantage__title -->
+	<div class="advantage__text">{{ text }}</div>
+	<!-- /.advantage__text -->
+</div>
+<!-- /.advantage__col -->
+
+{% endmacro %}
+
+{% macro pic(class="", img="", img@2x="", img@3x="") %}
+
+<div class="{{ class }}__pic">
+	<img src="{{ img }}" srcset="{{ img@2x }} 2x, {{ img@3x }} 3x" alt="" class="{{ class }}__img lazyload">
+	<!-- /.{{ class }}__img -->
+</div>
+<!-- /.{{ class }}__pic -->
+
+{% endmacro %}
+
+{% macro form(modifier="", from="") %}
+
+<form name="request" method="POST" action="php/function-send-form.php" class="sendler form form_{{ modifier }}">
+	<div class="form__input-wrap">
+		<span class="form__input-tel">+7 |</span>
+		<!-- /.form__input-tel -->
+		<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+		<!-- /.form__input -->
+	</div>
+	<!-- /.form__input-wrap -->
+	
+	<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="{{from}}">
+	<button class="form__btn btn" type="submit">Заказать</button>
+	<!-- /.form__btn btn -->
+</form>
+<!-- /.form .form_{{ modifier }} -->
+
+{% endmacro %}
+
+{% macro sliderBtn(class="slider", nextOrPrev="next") %}
+
+<div class="{{class}}__btn {{class}}__btn_{{nextOrPrev}}">
+	<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M9.5 3.54338L2.02055 3.54338" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M3.74657 0.666664L1.4452 3.44418L3.74657 6.42009" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+	</svg>
+</div>
+
+{% endmacro %}

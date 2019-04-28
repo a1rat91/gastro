@@ -1,0 +1,33 @@
+@custom-media --phone (width < 1200px);
+@custom-media --notPhone (width >= 1200px);
+@custom-media --tablet (width >= 768px) and (width <= 1259px);
+
+@mixin link() {
+	text-decoration: none;
+	border-bottom: 1px solid #e6ecf2;
+	transition: all 400ms;
+
+	&:hover {
+		text-decoration: none;
+		border-bottom-color: transparent;
+	}
+}
+@mixin justify($margin-bottom: -25px) {
+	& {
+		text-align: justify;
+		margin-bottom: $margin-bottom;
+
+		&:after {
+			display: inline-block;
+			content: '';
+			width: 100%;
+		}
+	}
+}
+
+@mixin img-responsive($width:100%) {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	width: $width;
+}

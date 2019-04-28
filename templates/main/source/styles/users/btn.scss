@@ -1,0 +1,15 @@
+.btn {
+	display: inline-block;
+	border: none;
+	padding: 10px 20px;
+	font-weight: 800;
+	border-radius: 50px;
+	font-size: 14px;
+	
+	.menu & {
+		background: #FFFFFF;
+		color: #518300;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+		margin-left: 15px;
+	}
+}

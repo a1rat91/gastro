@@ -1,0 +1,19 @@
+<div class="menu" id="js-menu" aria-expanded="false">
+	<nav>
+		<ul class="menu__list">
+			{% for item in data.menu.top %} 
+			<li class="menu__item">
+				<a href="#" class="menu__link">{{ item }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</nav>
+	
+	<a href="tel:+793767878889" class="menu__phone">+7 (937) 678 788 89</a>
+	<!-- /.menu__phone -->
+	<button class="btn menu__btn">
+		Заказать рекламное место
+	</button>
+	<!-- /.btn menu__btn -->
+</div>
+<!--end menu-->

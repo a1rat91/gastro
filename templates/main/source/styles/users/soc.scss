@@ -1,0 +1,29 @@
+.soc {
+	
+	&__list {
+		padding: 0;
+		margin: 0;
+		display: flex;
+	}
+	
+	&__item {
+		list-style-type: none;
+		padding: 0 8px;
+		
+		&:first-child {
+			padding-left: 0;
+		}
+		
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	
+	&__link {
+	
+	}
+	
+	&__pic {
+	
+	}
+}

@@ -1,0 +1,82 @@
+{% include 'head/head.html' %}
+
+<body>
+
+<div class="wrapper" id="js-wrapper">
+
+	{% include 'header/global/header.html' %}
+
+	<div class="middle">
+		<div class="middle__container">
+
+			<div class="content">
+				<!-- WORKAREA -->
+
+				{% include 'breadcrumbs/breadcrumbs.html' %}
+
+				<div class="title">{{ "fOObAr" | upper }}</div>
+
+				{% include 'checkbox/checkbox.html' %}
+				{% include 'pagination/pagination.html' %}
+
+				<div class="icon icon_ambulance"></div>
+
+				<div class="icon icon_auth"></div>
+
+				<div class="icon icon_auth2"></div>
+				<!-- /.icon icon_auth -->
+
+
+				<div class="text-default">
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique asperiores, quasi hic. Assumenda voluptatibus tenetur, praesentium officiis similique aperiam qui, odit sit nemo magni! Voluptate ipsum maiores consequatur aspernatur tenetur.
+					</p>
+
+					<table>
+						<tr>
+							<td>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
+							</td>
+							<td>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
+							</td>
+							<td>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
+							</td>
+						</tr>
+					</table>
+
+					<a href="">Link</a>
+
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+
+					и т.д.
+
+				</div>
+				<!-- /.text-default -->
+
+				<!-- END WORKAREA -->
+			</div>
+			<!-- /.content -->
+
+		</div>
+		<!-- /.middle__container -->
+	</div>
+	<!-- /.middle -->
+
+</div>
+<!-- /.wrapper -->
+
+{% include 'footer/global/footer.html' %}
+{% include 'connect/script.html' %}
+{% include 'connect/stylesheet.html' %}
+
+</body>
+</html>

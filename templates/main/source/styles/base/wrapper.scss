@@ -1,0 +1,12 @@
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	min-height: 100%;
+	width: auto;
+	
+	@media all and (max-width: 768px) {
+	
+		min-width: 320px;
+	}
+}

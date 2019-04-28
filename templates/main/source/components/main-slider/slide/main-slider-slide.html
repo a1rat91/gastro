@@ -1,0 +1,33 @@
+{% import "macros/macros.html" as form %}
+
+<div class="swiper-slide main-slider__slide">
+	<div class="main-slider__left">
+		<div class="main-slider__sub-title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">
+			Популярный сегмент, гибкие цены
+		</div>
+		<!-- /.main-slider__sub-title -->
+		<div class="main-slider__title" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+			Рекламные места на сайте
+			<span>гипермаркета № 1 по регионам</span>
+			<span >«вГастроном»</span>
+		</div>
+		<!-- /.main-slider__title -->
+		<div class="main-slider__form" data-swiper-parallax="-500" data-swiper-parallax-opacity="0">
+			{{ form.form(modifier="main-slider", from="Форма на главной") }}
+		</div>
+		<!-- /.main-slider__form -->
+	</div>
+	<!-- /.main-slider__left -->
+	<div class="main-slider__right">
+		<div class="main-slider__pic">
+			<img src="{{src}}main-slider-1.png" alt="" class="main-slider__img">
+			<!-- /.main-slider__img -->
+			<div class="main-slider__shadow">
+				<img src="{{src}}shadow.svg" alt="">
+			</div>
+			<!-- /.main-slider__shadow -->
+		</div>
+		<!-- /.main-slider__pic -->
+	</div>
+	<!-- /.main-slider__right -->
+</div>
