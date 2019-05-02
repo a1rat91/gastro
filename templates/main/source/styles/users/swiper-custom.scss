@@ -11,6 +11,23 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+	
+	.indicators & {
+		
+		margin-top: -26px !important;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			height: 70px;
+			width: 70px;
+			display: block;
+			background: #f5f7f9;
+			z-index: -1;
+			border-radius: 50px;
+		}
+	}
 	
 	span {
 		color: #000000;
@@ -32,14 +49,36 @@
 }
 
 .swiper-button-next {
+	
+	.indicators & {
+		&:before {
+			right: -50%;
+		}
+	}
+	
 	span:before {
 		left: -71px;
+	}
+	
+	.indicators & {
+		right: 0!important;
 	}
 }
 
 .swiper-button-prev {
+	
+	.indicators & {
+		&:before {
+			left: -50%;
+		}
+	}
+	
 	span:before {
 		right: -71px;
+	}
+	
+	.indicators & {
+		left: 0!important;
 	}
 }
 
@@ -63,6 +102,13 @@
 
 .swiper-container {
 	.main-slider & {
-		padding: 0 20px!important;
+		border-radius: 13px;
+	}
+}
+
+.swiper-slide {
+	
+	.indicators & {
+		width: auto;
 	}
 }

@@ -1,5 +1,7 @@
 {% include 'head/head.html' %}
 
+{% import "macros/macros.html" as form %}
+{% import "macros/macros.html" as sliderBtn %}
 <body>
 
 <div class="wrapper" id="js-wrapper">
@@ -13,8 +15,316 @@
 				<!-- WORKAREA -->
 				<div class="container">
 					
-					{% include 'main-slider/main-slider.html' %}
+					<div class="main-section" id="main-section">
+						<div class="main-section__left">
+							<div class="main-section__sub-title">
+								Популярный сегмент, гибкие цены
+							</div>
+							<!-- /.main-section__sub-title -->
+							<h1 class="main-section__title">
+								Рекламные места на сайте
+								<span>гипермаркета № 1 по регионам</span>
+								<span>«вГастроном»</span>
+							</h1>
+							<!-- /.main-section__title -->
+							<div class="main-section__form">
+								{{ form.form(modifier="main-section", from="Форма на главной") }}
+							</div>
+							<!-- /.main-section__form -->
+						</div>
+						<!-- /.main-section__left -->
+						<div class="main-section__right">
+							<div class="main-section__slider">
+								
+								<div class="main-section__slider-bg">
+									<img src="{{src}}main-slider-bg.png" alt="">
+								</div>
+								
+								{% include 'main-slider/main-slider.html' %}
+								
+								<div class="main-section__shadow">
+									<img src="{{src}}shadow.svg" alt="">
+								</div>
+								<!-- /.main-section__shadow -->
+							</div>
+							<!-- /.main-section__slider -->
+						</div>
+						<!-- /.main-section__right -->
+					</div>
+					<!-- /.main-section -->
 					
+					<div class="about" id="about">
+						
+						<div class="about__head">
+							<div class="about__title">
+								Почему вам стоит купить рекламное место на сайте вГастроном?
+							</div>
+							<!-- /.about__title -->
+							<div class="about__title-decor">
+								ПОЧЕМУ
+							</div>
+							<!-- /.about__title-decor -->
+						</div>
+						<!-- /.about__head -->
+						
+						
+						<div class="about-advantage">
+							<div class="about-advantage__col">
+								<div class="about-advantage__title">
+									Более 100 000
+								</div>
+								<!-- /.about-advantage__title -->
+								<div class="about-advantage__desc">
+									посетителей<br>
+									в месяц
+								</div>
+								<!-- /.about-advantage__desc -->
+							</div>
+							<!-- /.about-advantage__col -->
+							<div class="about-advantage__col">
+								<div class="about-advantage__title">
+									Более 25 000
+								</div>
+								<!-- /.about-advantage__title -->
+								<div class="about-advantage__desc">
+									проданных<br>
+									товаров в месяц
+								</div>
+								<!-- /.about-advantage__desc -->
+							</div>
+							<!-- /.about-advantage__col -->
+							<div class="about-advantage__col">
+								<div class="about-advantage__title">
+									Более 200 000
+								</div>
+								<!-- /.about-advantage__title -->
+								<div class="about-advantage__desc">
+									просмотров<br>
+									в месяц
+								</div>
+								<!-- /.about-advantage__desc -->
+							</div>
+							<!-- /.about-advantage__col -->
+						</div>
+						<!-- /.about-advantage -->
+						
+						<div class="about-numbs">
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									7
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Крупных<br>
+									городов РФ
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+							
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									7,61%
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Хорошая конверсия<br> в продажи от уникальных посетителей
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+							
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									26,16%
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Хороший показатель<br>
+									отказов
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+							
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									4,9%
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Высокий уровень<br>
+									SCAT <span>(по 5-ти<br>
+									бальной шкале)</span>
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+							
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									4,2
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Отличный рейтинг<br>
+									на Flamp
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+							
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									5,452
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Значительная<br>
+									глубина просмотров
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+							
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									5:46
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Среднее пребывание<br>
+									на сайте в минутах
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+							
+							<div class="about-numbs__col">
+								<div class="about-numbs__title">
+									20 100
+								</div>
+								<!-- /.about-numbs__title -->
+								<div class="about-numbs__desc">
+									Зарегистрированных<br>
+									пользователей
+								</div>
+								<!-- /.about-numbs__desc -->
+							</div>
+							<!-- /.about-numbs__col -->
+						</div>
+						<!-- /.about-numbs -->
+					</div>
+					<!-- /#about.about -->
+					
+					<div class="indicators" id="indicators">
+						
+						<div class="indicators__bg"></div>
+						
+						<div class="indicators__content">
+							<div class="indicators__title">
+								Показатели по городам
+							</div>
+							<!-- /.indicators__title -->
+							
+							<div class="indicators__tabs">
+								
+								<div class="swiper-container js-tabs-menu-slider tabs-menu__slider">
+									<div class="tabs-menu swiper-wrapper" data-tabs>
+										
+										
+										<a class="tabs-menu__link swiper-slide active" href="#js-tabs-1" data-tabs-children>
+											Все города
+										</a>
+										
+										
+										<a class="tabs-menu__link swiper-slide" href="#js-tabs-2"
+										   data-tabs-children>
+											Екатеринбург
+										</a>
+										
+										
+										<a class="tabs-menu__link swiper-slide" href="#js-tabs-3" data-tabs-children>
+											Санкт-Петербург
+										</a>
+										
+										
+										<a class="tabs-menu__link swiper-slide" href="#js-tabs-4" data-tabs-children>
+											Новосибирск
+										</a>
+										
+										
+										<a class="tabs-menu__link swiper-slide" href="#js-tabs-5" data-tabs-children>
+											Самара
+										</a>
+										
+										<a class="tabs-menu__link swiper-slide" href="#js-tabs-6" data-tabs-children>
+											Нижний Новгород
+										</a>
+										
+										<a class="tabs-menu__link swiper-slide" href="#js-tabs-7"
+										   data-tabs-children>
+											Пермь
+										</a>
+										
+										<a class="tabs-menu__link swiper-slide" href="#js-tabs-8" data-tabs-children>
+											Уфа
+										</a>
+									
+									</div>
+									<!-- /.tabs-menu -->
+									<!-- Add Arrows -->
+									<div class="swiper-button-prev js-tabs-menu-prev js-tabs-menu-prev swiper-button-disabled">
+										{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="prev") }}
+									</div>
+									<div class="swiper-button-next js-tabs-menu-next tabs-menu__next">
+										{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="next") }}
+									</div>
+								</div>
+								
+								
+								<div class="tabs">
+									<div class="tabs__inner" id="js-tabs-1">
+										<div class="all circle"></div>
+									</div>
+									<div class="tabs__inner" id="js-tabs-2">
+										<div class="ekat circle"></div>
+									</div>
+									<div class="tabs__inner" id="js-tabs-3">
+										Санкт-Петербург
+										<div class="spb circle"></div>
+									</div>
+									<div class="tabs__inner" id="js-tabs-4">
+										Новосибирск
+										<div class="novosib circle"></div>
+									</div>
+									<div class="tabs__inner" id="js-tabs-5">
+										Самара
+										<div class="samara circle"></div>
+									</div>
+									
+									<div class="tabs__inner" id="js-tabs-6">
+										Нижний Новгород
+										<div class="nn circle"></div>
+									</div>
+									<div class="tabs__inner" id="js-tabs-7">
+										Пермь
+										<div class="perm circle"></div>
+									</div>
+									<div class="tabs__inner" id="js-tabs-8">
+										Уфа
+										<div class="ufa circle"></div>
+									</div>
+									
+								</div>
+								<!-- /.tabs  -->
+							</div>
+							<!-- /.indicators__tabs -->
+						</div>
+						<!-- /.indicators__content -->
+					</div>
+					<!-- /#indicators.indicators -->
+				
 				</div>
 				<!-- /.container -->
 				
@@ -29,6 +339,11 @@
 
 </div>
 <!-- /.wrapper -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script>
+	var toolTimeline = new TimelineMax({repeat: -1, repeatDelay: 10});
+</script>
 
 {% include 'footer/global/footer.html' %}
 {% include 'connect/script.html' %}

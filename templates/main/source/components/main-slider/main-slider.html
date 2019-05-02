@@ -5,16 +5,30 @@
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			
-			{% include 'main-slider/slide/main-slider-slide.html' %}
-			{% include 'main-slider/slide/main-slider-slide.html' %}
-			{% include 'main-slider/slide/main-slider-slide.html' %}
-			{% include 'main-slider/slide/main-slider-slide.html' %}
-			{% include 'main-slider/slide/main-slider-slide.html' %}
+			<div class="swiper-slide main-slider__slide">
+				<a href="#">
+					<img src="{{src}}main-slider-1.jpg" alt="" class="main-slider__img">
+					<!-- /.main-slider__img -->
+				</a>
+			</div>
+			<div class="swiper-slide main-slider__slide">
+				<a href="#">
+					<img src="{{src}}main-slider-1.jpg" alt="" class="main-slider__img">
+					<!-- /.main-slider__img -->
+				</a>
+			</div>
+			<div class="swiper-slide main-slider__slide">
+				<a href="#">
+					<img src="{{src}}main-slider-1.jpg" alt="" class="main-slider__img">
+					<!-- /.main-slider__img -->
+				</a>
+			</div>
 		</div>
-		<!-- Add Pagination -->
-		<div class="swiper-pagination slider__pagination"></div>
 	
 	</div>
+	
+	<!-- Add Pagination -->
+	<div class="swiper-pagination slider__pagination"></div>
 	
 	<!-- Add Arrows -->
 	<div class="swiper-button-prev js-main-slider-prev main-slider__prev swiper-button-disabled">

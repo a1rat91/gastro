@@ -1,0 +1,21 @@
+.about-numbs {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+	
+	&__col {
+		width: 25%;
+		padding-right: 40px;
+		padding-bottom: 20px;
+	}
+	
+	&__title {
+		font-size: 50px;
+		font-weight: 800;
+		color: $accent-color;
+	}
+	
+	&__desc {
+	
+	}
+}

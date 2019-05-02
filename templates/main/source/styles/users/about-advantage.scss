@@ -1,0 +1,22 @@
+.about-advantage {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid rgba(#000, .05);
+	padding-bottom: 30px;
+	margin-bottom: 17px;
+	
+	&__col {
+		width: calc(100% / 5);
+		padding-right: 15px;
+	}
+	
+	&__title {
+		font-size: 16px;
+		font-weight: 800;
+	}
+	
+	&__desc {
+		font-size: 16px;
+		color: rgba(#323232, .7);
+	}
+}

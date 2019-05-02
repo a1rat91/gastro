@@ -1,0 +1,35 @@
+.about {
+	padding: 0 58px;
+	
+	&__head {
+		position: relative;
+	}
+
+	&__title {
+		font-size: 25px;
+		font-weight: 800;
+		max-width: 463px;
+		margin-bottom: 55px;
+		position: relative;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			height: 4px;
+			background: $accent-color;
+			width: 41px;
+			left: -55px;
+			top: 15px;
+		}
+	}
+	
+	&__title-decor {
+		position: absolute;
+		color: rgba(50,50,50,.03);
+		font-size: 180px;
+		font-weight: 800;
+		line-height: 1;
+		transform: translateY(-105%);
+		left: 100px;
+	}
+}
