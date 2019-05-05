@@ -83,9 +83,9 @@ var processors = [
 	mqPacker({
 		sort: sortMediaQueries
 	}),
-	cssnano({
-		preset: 'advanced',
-	})
+	// cssnano({
+	// 	preset: 'advanced',
+	// })
 ];
 
 return gulp.src(config.src.source.css.src)
