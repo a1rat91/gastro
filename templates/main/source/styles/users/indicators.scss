@@ -11,7 +11,34 @@
 		z-index: -1;
 	}
 	
-	&__content {
+	&__section {
 		padding: 60px 0;
+	}
+	
+	&__title {
+		font-weight: 800;
+		font-size: 25px;
+		text-align: center;
+	}
+	
+	&__tabs {
+		position: relative;
+	}
+	
+	&__row {
+		display: flex;
+		
+	}
+	
+	&__form {
+		max-width: 508px;
+		margin: 0 auto;
+	}
+	
+	&__form-title {
+		font-weight: 800;
+		font-size: 18px;
+		margin-bottom: 15px;
+		text-align: center;
 	}
 }

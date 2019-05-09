@@ -1,0 +1,34 @@
+{% macro indicatorsBlock(
+	title = 'Среднее колличество просмотров в месяц',
+	city = 'all',
+	indicator = 'month',
+	count = 'от 207 000',
+	desc = 'Просмотры'
+)  %}
+
+<div class="indicators-block">
+	<div class="indicators-block__title">
+		{{ title }}
+	</div>
+	<!-- /.indicators-block__title -->
+	<div class="indicators-block__content">
+		<div class="indicators-block__circle">
+			<div class="{{ city }}-{{indicator}} circle">
+				<div class="circle__count">
+					{{ count }}
+				</div>
+				<!-- /.circle__count -->
+			</div>
+		</div>
+		<!-- /.indicators-block__circle -->
+		<div class="indicators-block__circle-desc">
+			<span>{{ desc }}</span>
+		</div>
+		<!-- /.indicators-block__circle-desc -->
+	</div>
+	<!-- /.indicators-block__content -->
+
+</div>
+<!-- /.indicators-block -->
+
+{% endmacro %}

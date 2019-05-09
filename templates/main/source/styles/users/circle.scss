@@ -8,31 +8,65 @@
 	position: relative;
 	text-align: center;
 	line-height: 1.2;
-}
-
-.circle canvas {
-	vertical-align: top;
-	transform: rotate(45deg);
-}
-
-.circle strong {
-	position: absolute;
-	top: 30px;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	line-height: 40px;
-	font-size: 30px;
-}
-
-.circle strong i {
-	font-style: normal;
-	font-size: 0.6em;
-	font-weight: normal;
-}
-
-.circle span {
-	display: block;
-	color: #aaa;
-	margin-top: 12px;
+	
+	canvas {
+		vertical-align: top;
+		transform: rotate(45deg);
+	}
+	
+	strong {
+		position: absolute;
+		top: 30px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		line-height: 40px;
+		font-size: 30px;
+		
+		i {
+			font-style: normal;
+			font-size: 0.6em;
+			font-weight: normal;
+		}
+	}
+	
+	span {
+		display: block;
+		color: #aaa;
+		margin-top: 12px;
+	}
+	
+	&__count {
+		font-weight: 500;
+		font-size: 18px;
+		color: #000000;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		white-space: nowrap;
+		
+		&_male,
+		&_female {
+			font-size: 14px;
+			transform: translate(0%, 0%);
+			line-height: 21px;
+		}
+		
+		&_male {
+			//transform: translate(-50%, -50%) translate(-50%, -50%);
+			top: 30px;
+			left: 30px;
+			color: $orange;
+		}
+		
+		&_female {
+			//transform: translate(-50%, -50%) translate(50%, 50%);
+			top: auto;
+			left: auto;
+			bottom: 30px;
+			right: 30px;
+			color: $accent-color;
+		}
+	}
 }

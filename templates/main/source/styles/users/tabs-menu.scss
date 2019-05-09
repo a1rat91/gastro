@@ -5,9 +5,10 @@
 	&__link {
 		display: block;
 		padding: 17px 15px;
+		//padding: 17px 20px;
 		text-decoration: none;
 		background: #FFFFFF;
-		//box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 		border-radius: 3px;
 		cursor: pointer;
 		transition: background 500ms, color 500ms;
@@ -15,6 +16,8 @@
 		text-align: center;
 		
 		&.active {
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+			
 			&:before {
 				z-index: 1;
 				content: "";
@@ -60,6 +63,7 @@
 	}
 	
 	&__slider {
-		padding: 50px 0;
+		padding: 50px 15px;
+		margin: 0 65px;
 	}
 }

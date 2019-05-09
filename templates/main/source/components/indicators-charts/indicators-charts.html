@@ -1,0 +1,30 @@
+{% macro indicatorsCharts(
+mod = 'all',
+yearsVal = '9%'
+)  %}
+
+<div class="indicators-charts indicators-charts_{{mod}}">
+	<div class="indicators-charts__title">
+		Возраст пользователей
+	</div>
+	<!-- /.indicators-charts__title -->
+	<div class="indicators-charts__content">
+		
+		
+		<div class="indicators-charts__row">
+			<div class="indicators-charts__years">18‑24 года</div>
+			<!-- /.indicators-charts__years -->
+			<div class="indicators-charts__chart"></div>
+			<!-- /.indicators-charts__chart -->
+			<div class="indicators-charts__val">{{yearsVal}}</div>
+			<!-- /.indicators-charts__val -->
+		</div>
+		<!-- /.indicators-charts__row -->
+	
+	</div>
+	<!-- /.indicators-charts__content -->
+
+</div>
+<!-- /.indicators-charts -->
+
+{% endmacro %}

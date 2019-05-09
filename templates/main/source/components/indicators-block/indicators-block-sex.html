@@ -1,0 +1,41 @@
+{% macro indicatorsBlockSex(
+	title = 'Пол пользователей',
+	mod = 'indicators-block_sex',
+	city = 'all',
+	indicator = 'sex',
+	countFemale = '63%',
+	countMale = '37%'
+)  %}
+
+<div class="indicators-block {{ mod }}">
+	<div class="indicators-block__title">
+		{{ title }}
+	</div>
+	<!-- /.indicators-block__title -->
+	<div class="indicators-block__content">
+		<div class="indicators-block__circle">
+			<div class="{{ city }}-{{indicator}} circle">
+				<div class="circle__count circle__count_male">
+					{{ countMale }}
+				</div>
+				<!-- /.circle__count -->
+				
+				<div class="circle__count circle__count_female">
+					{{ countFemale }}
+				</div>
+				<!-- /.circle__count -->
+			</div>
+		</div>
+		<!-- /.indicators-block__circle -->
+		<div class="indicators-block__circle-desc">
+			<span>Мужчины</span>
+			<span>Женщины</span>
+		</div>
+		<!-- /.indicators-block__circle-desc -->
+	</div>
+	<!-- /.indicators-block__content -->
+
+</div>
+<!-- /.indicators-block -->
+
+{% endmacro %}

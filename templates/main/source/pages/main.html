@@ -64,10 +64,10 @@
 								Почему вам стоит купить рекламное место на сайте вГастроном?
 							</div>
 							<!-- /.about__title -->
-							<div class="about__title-decor">
+							<div class="about__shadow">
 								ПОЧЕМУ
 							</div>
-							<!-- /.about__title-decor -->
+							<!-- /.about__shadow -->
 						</div>
 						<!-- /.about__head -->
 						
@@ -225,7 +225,7 @@
 						
 						<div class="indicators__bg"></div>
 						
-						<div class="indicators__content">
+						<div class="indicators__section">
 							<div class="indicators__title">
 								Показатели по городам
 							</div>
@@ -277,55 +277,321 @@
 									
 									</div>
 									<!-- /.tabs-menu -->
-									<!-- Add Arrows -->
-									<div class="swiper-button-prev js-tabs-menu-prev js-tabs-menu-prev swiper-button-disabled">
-										{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="prev") }}
-									</div>
-									<div class="swiper-button-next js-tabs-menu-next tabs-menu__next">
-										{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="next") }}
-									</div>
 								</div>
 								
+								<!-- Add Arrows -->
+								<div class="swiper-button-prev js-tabs-menu-prev js-tabs-menu-prev swiper-button-disabled">
+									{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="prev") }}
+								</div>
+								<div class="swiper-button-next js-tabs-menu-next tabs-menu__next">
+									{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="next") }}
+								</div>
 								
+							</div>
+							<!-- /.indicators__tabs -->
+							
+							{% from "indicators-block/indicators-block.html" import indicatorsBlock %}
+							{% from "indicators-block/indicators-block-sex.html" import indicatorsBlockSex %}
+							{% from "indicators-charts/indicators-charts.html" import indicatorsCharts %}
+							
+							<div class="indicators__content">
 								<div class="tabs">
 									<div class="tabs__inner" id="js-tabs-1">
-										<div class="all circle"></div>
+										<div class="indicators__row">
+											
+											<div class="indicators-block__list">
+												
+												<div class="indicators-block__item">
+													{{indicatorsBlock()}}
+												</div>
+												<!-- /.indicators-block__item -->
+												
+												<div class="indicators-block__item">
+													{{indicatorsBlock(
+													title = 'Среднее колличество просмотров ЗА ГОД',
+													city = 'all',
+													indicator = 'year',
+													count = '1 328 158',
+													desc = 'Просмотры'
+													)}}
+												</div>
+												<!-- /.indicators-block__item -->
+												
+												<div class="indicators-block__item">
+													{{indicatorsBlockSex()}}
+												</div>
+												<!-- /.indicators-block__item -->
+												
+												<div class="indicators-block__item">
+													{{indicatorsCharts()}}
+												</div>
+												<!-- /.indicators-block__item -->
+											</div>
+											<!-- /.indicators-block__list -->
+											
+											<div class="indicators-text">
+												<div class="indicators-text__title">
+													Cреднее время пребывания на сайте
+												</div>
+												<!-- /.indicators-text__title -->
+												<div class="indicators-text__desc">
+													5:46 минут
+												</div>
+												<!-- /.indicators-text__desc -->
+												
+												<div class="indicators-text__title">
+													Глубина просмотра за время работы
+												</div>
+												<!-- /.indicators-text__title -->
+												<div class="indicators-text__desc">
+													7:39 минут
+												</div>
+												<!-- /.indicators-text__desc -->
+												
+												<div class="indicators-text__title">
+													Отказы за все время работы сайта
+												</div>
+												<!-- /.indicators-text__title -->
+												<div class="indicators-text__desc">
+													26,16%
+												</div>
+												<!-- /.indicators-text__desc -->
+												
+												<div class="indicators-text__title">
+													Колличество зарегистрированных пользователей
+												</div>
+												<!-- /.indicators-text__title -->
+												<div class="indicators-text__desc">
+													Более 20 тысяч
+												</div>
+												<!-- /.indicators-text__desc -->
+												
+												<div class="indicators-text__title">
+													Среднее кол-во позиций, добавляемых одним пользователем в корзину
+												</div>
+												<!-- /.indicators-text__title -->
+												<div class="indicators-text__desc">
+													18 разных позиций товаров
+												</div>
+												<!-- /.indicators-text__desc -->
+											</div>
+											<!-- /.indicators-text -->
+											
+										</div>
+										<!-- /.indicators__row -->
+										<div class="indicators__form">
+											
+											<div class="indicators__form-title">
+												Заказать рекламу в этом городе
+											</div>
+											<!-- /.indicators__form-title -->
+											
+											{{ form.form(modifier="indication", from="Форма показатели по всем городам") }}
+											
+											
+										</div>
+										<!-- /.indicators__form -->
 									</div>
+									
 									<div class="tabs__inner" id="js-tabs-2">
-										<div class="ekat circle"></div>
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров за месяц',
+										city = 'ekat',
+										indicator = 'month',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров ЗА ГОД',
+										city = 'ekat',
+										indicator = 'year',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlockSex(
+										title = 'ПОЛ ПОЛЬЗОВАТЕЛЕЙ',
+										mod = 'indicators-block_sex',
+										city = 'ekat',
+										indicator = 'sex',
+										countFemale = '37%',
+										countMale = '63%'
+										)}}
+										
 									</div>
 									<div class="tabs__inner" id="js-tabs-3">
-										Санкт-Петербург
-										<div class="spb circle"></div>
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров за месяц',
+										city = 'spb',
+										indicator = 'month',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров ЗА ГОД',
+										city = 'spb',
+										indicator = 'year',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlockSex(
+										title = 'ПОЛ ПОЛЬЗОВАТЕЛЕЙ',
+										mod = 'indicators-block_sex',
+										city = 'spb',
+										indicator = 'sex',
+										countFemale = '37%',
+										countMale = '63%'
+										)}}
+										
 									</div>
 									<div class="tabs__inner" id="js-tabs-4">
-										Новосибирск
-										<div class="novosib circle"></div>
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров за месяц',
+										city = 'novosib',
+										indicator = 'month',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров ЗА ГОД',
+										city = 'novosib',
+										indicator = 'year',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlockSex(
+										title = 'ПОЛ ПОЛЬЗОВАТЕЛЕЙ',
+										mod = 'indicators-block_sex',
+										city = 'novosib',
+										indicator = 'sex',
+										countFemale = '37%',
+										countMale = '63%'
+										)}}
 									</div>
 									<div class="tabs__inner" id="js-tabs-5">
-										Самара
-										<div class="samara circle"></div>
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров за месяц',
+										city = 'samara',
+										indicator = 'month',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров ЗА ГОД',
+										city = 'samara',
+										indicator = 'year',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlockSex(
+										title = 'ПОЛ ПОЛЬЗОВАТЕЛЕЙ',
+										mod = 'indicators-block_sex',
+										city = 'samara',
+										indicator = 'sex',
+										countFemale = '37%',
+										countMale = '63%'
+										)}}
 									</div>
 									
 									<div class="tabs__inner" id="js-tabs-6">
-										Нижний Новгород
-										<div class="nn circle"></div>
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров за месяц',
+										city = 'nn',
+										indicator = 'month',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров ЗА ГОД',
+										city = 'nn',
+										indicator = 'year',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlockSex(
+										title = 'ПОЛ ПОЛЬЗОВАТЕЛЕЙ',
+										mod = 'indicators-block_sex',
+										city = 'nn',
+										indicator = 'sex',
+										countFemale = '37%',
+										countMale = '63%'
+										)}}
 									</div>
 									<div class="tabs__inner" id="js-tabs-7">
-										Пермь
-										<div class="perm circle"></div>
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров за месяц',
+										city = 'perm',
+										indicator = 'month',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров ЗА ГОД',
+										city = 'perm',
+										indicator = 'year',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlockSex(
+										title = 'ПОЛ ПОЛЬЗОВАТЕЛЕЙ',
+										mod = 'indicators-block_sex',
+										city = 'perm',
+										indicator = 'sex',
+										countFemale = '37%',
+										countMale = '63%'
+										)}}
 									</div>
 									<div class="tabs__inner" id="js-tabs-8">
-										Уфа
-										<div class="ufa circle"></div>
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров за месяц',
+										city = 'ufa',
+										indicator = 'month',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlock(
+										title = 'Среднее колличество просмотров ЗА ГОД',
+										city = 'ufa',
+										indicator = 'year',
+										count = '1 328 158',
+										desc = 'Просмотры'
+										)}}
+										
+										{{indicatorsBlockSex(
+										title = 'ПОЛ ПОЛЬЗОВАТЕЛЕЙ',
+										mod = 'indicators-block_sex',
+										city = 'ufa',
+										indicator = 'sex',
+										countFemale = '37%',
+										countMale = '63%'
+										)}}
 									</div>
-									
+								
 								</div>
 								<!-- /.tabs  -->
 							</div>
-							<!-- /.indicators__tabs -->
+							<!-- /.indicators__content -->
 						</div>
-						<!-- /.indicators__content -->
+						<!-- /.indicators__section -->
 					</div>
 					<!-- /#indicators.indicators -->
 				

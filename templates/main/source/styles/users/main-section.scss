@@ -34,24 +34,6 @@
 				inset 0 30px white,
 				inset 0 50px #fff;
 		}
-		
-		//border-bottom: 20px solid rgba(180, 210, 57, .3);
-		
-		//span {
-		//	position: relative;
-		//
-		//	&:before {
-		//		content: '';
-		//		position: absolute;
-		//		display: block;
-		//		background: rgba(180, 210, 57, .3);
-		//		height: 20px;
-		//		width: 100%;
-		//		z-index: -1;
-		//		bottom: 0;
-		//		left: 0;
-		//	}
-		//}
 	}
 	
 	&__slider {
@@ -71,5 +53,9 @@
 			@include img-responsive(auto);
 			margin: 0 auto;
 		}
+	}
+	
+	&__form {
+		max-width: 390px;
 	}
 }

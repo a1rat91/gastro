@@ -1,5 +1,9 @@
 .swiper-button-disabled {
 	opacity: 0 !important;
+	
+	.indicators & {
+		opacity: .3!important;
+	}
 }
 
 .swiper-button-next,
