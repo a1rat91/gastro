@@ -134,31 +134,6 @@ $(document).ready(function () {
 		}
 	});
 	
-	// Прибивка адаптивного футера к низу
-	(function (footerSelector, wrapperSelector) {
-
-		var footer = document.querySelector(footerSelector);
-		var wrapper = document.querySelector(wrapperSelector);
-		var height;
-		var setSize;
-
-		if (!wrapper || !footer) {
-			return false;
-		}
-
-		setSize = function () {
-
-			height = footer.offsetHeight;
-
-			wrapper.style.paddingBottom = height + 'px';
-			footer.style.marginTop = (height * (-1)) + 'px';
-
-		}
-
-		setSize();
-
-		window.addEventListener('resize', setSize, false);
-
-	})('#js-footer', '#js-wrapper');
+	var tooltip = new Tooltip('tooltip');
 
 });
