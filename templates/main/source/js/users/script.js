@@ -5,30 +5,51 @@ $(document).ready(function () {
 	$('#js-hamburger').click(function () {
 		
 		$(this).toggleClass('active');
-		$('#js-menu').toggleClass('active');
+		$('.js-mobile-menu').toggleClass('active');
+		
+		$('html, body').toggleClass('body-fixed')
 	});
 	
-	
+	$(document).on('click', '[data-ajax]', function (e) {
+		e.stopPropagation();
+		e.preventDefault();
+		$.get(this.getAttribute('data-url'), function (response) {
+			globalPopup.html(response).show();
+		});
+	});
 	
 	var mainSwiper = new Swiper('.js-main-slider .swiper-container', {
-		speed: 600,
+		speed: 1500,
 		slidesPerView: 1,
+		parallax: true,
 		autoplay: {
-			delay: 2000,
+			delay: 200000,
 			disableOnInteraction: false,
 		},
 		pagination: {
-			el: '.js-main-slider .swiper-pagination',
-			type: 'fraction',
+			el: '.swiper-pagination',
+			type: 'fraction'
+			
+			
 		},
 		navigation: {
 			nextEl: '.js-main-slider-next',
 			prevEl: '.js-main-slider-prev',
+		},
+		breakpoints: {
+			
+			992: {
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets'
+					
+					
+				},
+			}
 		}
 	});
 	
 	var tabsMenuSwiper = new Swiper('.js-tabs-menu-slider', {
-		// slidesPerView: 'auto',
 		slidesPerView: 5,
 		slidesPerGroup: 1,
 		speed: 800,
@@ -36,96 +57,22 @@ $(document).ready(function () {
 		navigation: {
 			nextEl: '.js-tabs-menu-next',
 			prevEl: '.js-tabs-menu-prev',
+		},
+		breakpoints: {
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 34
+			}
 		}
 	});
 
 	$("[type=tel]").inputmask("(999) 999-99-99");
 	
-	function circleFillOpts(el, emptyFill, fill, val, delay) {
-		$(el).circleProgress({
-			startAngle: -Math.PI / 4 * 3,
-			size: 137,
-			value: 0,
-			lineCap: 'round',
-			emptyFill: emptyFill,
-			fill: {color: fill}
-		});
-		setTimeout(function() { $(el).circleProgress('value', val); }, delay);
-	}
 	
-	function circles() {
-		
-		/* =============================================================================================================
-			Все города
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.all-month', '#E6EAF0', '#B4D239', 0.33, 500);// 33%
-		circleFillOpts('.all-year', '#E6EAF0', '#B4D239', 0.40, 500);
-		circleFillOpts('.all-sex', '#FEA32A', '#B4D239', 0.63, 500);
-		
-		
-		/* =============================================================================================================
-			Екатеринбург
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.ekat-month', '#E6EAF0', '#B4D239', 0.33, 500);
-		circleFillOpts('.ekat-year', '#E6EAF0', '#B4D239', 0.50, 500);
-		circleFillOpts('.ekat-sex', '#FEA32A', '#B4D239', 0.50, 500);
-		
-		
-		/* =============================================================================================================
-			Санкт-Петербург
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.spb-month', '#E6EAF0', '#B4D239', 0.33, 500);
-		circleFillOpts('.spb-year', '#E6EAF0', '#B4D239', 0.50, 500);
-		circleFillOpts('.spb-sex', '#FEA32A', '#B4D239', 0.50, 500);
-		
-		
-		/* =============================================================================================================
-			Новосибирск
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.novosib-month', '#E6EAF0', '#B4D239', 0.33, 500);
-		circleFillOpts('.novosib-year', '#E6EAF0', '#B4D239', 0.50, 500);
-		circleFillOpts('.novosib-sex', '#FEA32A', '#B4D239', 0.50, 500);
-		
-		
-		/* =============================================================================================================
-			Самара
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.samara-month', '#E6EAF0', '#B4D239', 0.33, 500);
-		circleFillOpts('.samara-year', '#E6EAF0', '#B4D239', 0.50, 500);
-		circleFillOpts('.samara-sex', '#FEA32A', '#B4D239', 0.50, 500);
-		
-		
-		/* =============================================================================================================
-			Нижний Новгород
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.nn-month', '#E6EAF0', '#B4D239', 0.33, 500);
-		circleFillOpts('.nn-year', '#E6EAF0', '#B4D239', 0.50, 500);
-		circleFillOpts('.nn-sex', '#FEA32A', '#B4D239', 0.50, 500);
-		
-		
-		/* =============================================================================================================
-			Пермь
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.perm-month', '#E6EAF0', '#B4D239', 0.33, 500);
-		circleFillOpts('.perm-year', '#E6EAF0', '#B4D239', 0.50, 500);
-		circleFillOpts('.perm-sex', '#FEA32A', '#B4D239', 0.50, 500);
-		
-		
-		/* =============================================================================================================
-			Уфа
-			(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
-=============================================================================================================*/
-		circleFillOpts('.ufa-month', '#E6EAF0', '#B4D239', 0.33, 500);
-		circleFillOpts('.ufa-year', '#E6EAF0', '#B4D239', 0.50, 500);
-		circleFillOpts('.ufa-sex', '#FEA32A', '#B4D239', 0.50, 500);
-	}
 	circles();
 	
 	new Tabs({
@@ -135,5 +82,32 @@ $(document).ready(function () {
 	});
 	
 	var tooltip = new Tooltip('tooltip');
+	
+	$(".js-anim-scroll").click(function (e) {
+		e.preventDefault();
+		
+		var offset = parseInt(this.getAttribute('data-offset')) || 150;
+		
+		var top = $(this.getAttribute("href")).offset().top - offset;
+		
+		$("html, body").animate({scrollTop: top + "px"});
+		
+		if ($(this).attr('href') == '#js-platforms-tabs-1') {
+			$('.platforms__tabs .tabs-menu').children()[0].click();
+		} else if($(this).attr('href') == '#js-platforms-tabs-2') {
+			$('.platforms__tabs .tabs-menu').children()[1].click();
+		} else if ($(this).attr('href') == '#js-platforms-tabs-3') {
+			$('.platforms__tabs .tabs-menu').children()[2].click();
+		} else if ($(this).attr('href') == '#js-platforms-tabs-4') {
+			$('.platforms__tabs .tabs-menu').children()[3].click();
+		} else if ($(this).attr('href') == '#js-platforms-tabs-5') {
+			$('.platforms__tabs .tabs-menu').children()[4].click();
+		} else if ($(this).attr('href') == '#js-platforms-tabs-6') {
+			$('.platforms__tabs .tabs-menu').children()[5].click();
+		}
+		
+		return false;
+		
+	});
 
 });

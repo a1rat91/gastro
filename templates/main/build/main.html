@@ -33,43 +33,46 @@
 						<!-- /.logo -->
 					</div>
 					<div class="header__block header__block_wide">
-						<button class="hamburger" id="js-hamburger" aria-expanded="false">
-							<span></span>
-						</button>
-
 
 						<div class="menu" id="js-menu" aria-expanded="false">
 							<nav>
 								<ul class="menu__list">
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Почему мы</a>
+										<a href="#about" class="menu__link js-anim-scroll">Почему мы</a>
 									</li>
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Наши показатели</a>
+										<a href="#about" class="menu__link js-anim-scroll">Наши показатели</a>
 									</li>
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Все о рекламных местах</a>
+										<a href="#about" class="menu__link js-anim-scroll">Все о рекламных местах</a>
 									</li>
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Наши перспективы</a>
+										<a href="#about" class="menu__link js-anim-scroll">Наши перспективы</a>
 									</li>
 
 								</ul>
 							</nav>
-
-							<a href="tel:+793767878889" class="menu__phone">+7 (937) 678 788 89</a>
-							<!-- /.menu__phone -->
-							<button class="btn menu__btn">
-								Заказать рекламное место
-							</button>
-							<!-- /.btn menu__btn -->
 						</div>
 						<!--end menu-->
 
+
+						<a href="tel:+793767878889" class="header__phone">+7 (937) 678 788 89</a>
+						<!-- /.header__phone -->
+
+						<a href="#" data-url="ajax/callback.html" data-ajax="" class="btn header__btn">
+
+					Заказать рекламное место
+
+				</a>
+						<!-- /.btn header__btn -->
+
+						<button class="hamburger" id="js-hamburger" aria-expanded="false">
+							<span></span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -135,20 +138,62 @@
 											<div class="swiper-wrapper">
 
 												<div class="swiper-slide main-slider__slide">
-													<a href="#">
+													<div class="main-slider__slide-desc" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+														Рекламный баннер
+													</div>
+													<!-- /.main-slider__slide-desc -->
+													<a href="#js-platforms-tabs-1" class="js-anim-scroll main-slider__link js-main-slider-link">
 														<img src="images/main-slider-1.jpg" alt="" class="main-slider__img">
 														<!-- /.main-slider__img -->
 													</a>
 												</div>
 												<div class="swiper-slide main-slider__slide">
-													<a href="#">
-														<img src="images/main-slider-1.jpg" alt="" class="main-slider__img">
+													<div class="main-slider__slide-desc" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+														Реклама в каталоге конкретного раздела
+													</div>
+													<!-- /.main-slider__slide-desc -->
+													<a href="#js-platforms-tabs-2" class="js-anim-scroll main-slider__link js-main-slider-link">
+														<img src="images/main-slider-2.jpg" alt="" class="main-slider__img">
 														<!-- /.main-slider__img -->
 													</a>
 												</div>
 												<div class="swiper-slide main-slider__slide">
-													<a href="#">
-														<img src="images/main-slider-1.jpg" alt="" class="main-slider__img">
+													<div class="main-slider__slide-desc" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+														Реклама в каталоге продукции
+													</div>
+													<!-- /.main-slider__slide-desc -->
+													<a href="#js-platforms-tabs-3" class="js-anim-scroll main-slider__link js-main-slider-link">
+														<img src="images/main-slider-3.jpg" alt="" class="main-slider__img">
+														<!-- /.main-slider__img -->
+													</a>
+												</div>
+												<div class="swiper-slide main-slider__slide">
+													<div class="main-slider__slide-desc" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+														Реклама в разделе «красные ценники»
+													</div>
+													<!-- /.main-slider__slide-desc -->
+													<a href="#js-platforms-tabs-4" class="js-anim-scroll main-slider__link js-main-slider-link">
+														<img src="images/main-slider-4.jpg" alt="" class="main-slider__img">
+														<!-- /.main-slider__img -->
+													</a>
+												</div>
+												<div class="swiper-slide main-slider__slide">
+													<div class="main-slider__slide-desc" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+														Рекламные баннеры в разделе «специальные предложения»
+													</div>
+													<!-- /.main-slider__slide-desc -->
+													<a href="#js-platforms-tabs-5" class="js-anim-scroll main-slider__link js-main-slider-link">
+														<img src="images/main-slider-5.jpg" alt="" class="main-slider__img">
+														<!-- /.main-slider__img -->
+													</a>
+												</div>
+												<div class="swiper-slide main-slider__slide">
+													<div class="main-slider__slide-desc" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+														Рекламная e-mail рассылка
+													</div>
+													<!-- /.main-slider__slide-desc -->
+													<a href="#js-platforms-tabs-6" class="js-anim-scroll main-slider__link js-main-slider-link">
+														<img src="images/main-slider-6.jpg" alt="" class="main-slider__img">
 														<!-- /.main-slider__img -->
 													</a>
 												</div>
@@ -364,10 +409,10 @@
 							<div class="indicators__bg"></div>
 
 							<div class="indicators__section">
-								<div class="indicators__title">
+								<div class="section__title">
 									Показатели по городам
 								</div>
-								<!-- /.indicators__title -->
+								<!-- /.section__title -->
 
 								<div class="indicators__tabs">
 
@@ -688,50 +733,61 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															5:46 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															7:39 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															26,16%
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															Более 20 тысяч
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															18 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -784,7 +840,7 @@
 																<div class="indicators-block__circle">
 																	<div class="ekat-month circle">
 																		<div class="circle__count">
-																			от 207 000
+																			от 35 000
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -816,7 +872,7 @@
 																<div class="indicators-block__circle">
 																	<div class="ekat-year circle">
 																		<div class="circle__count">
-																			1 328 158
+																			826,602
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -848,12 +904,12 @@
 																<div class="indicators-block__circle">
 																	<div class="ekat-sex circle">
 																		<div class="circle__count circle__count_male">
-																			37%
+																			31%
 																		</div>
 																		<!-- /.circle__count -->
 
 																		<div class="circle__count circle__count_female">
-																			63%
+																			69%
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -891,11 +947,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 9%"></div>
+																		<div class="indicators-charts__chart" style="width: 7%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">9%</div>
+																	<div class="indicators-charts__val">7%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -910,11 +966,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 40%"></div>
+																		<div class="indicators-charts__chart" style="width: 49%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">40%</div>
+																	<div class="indicators-charts__val">49%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -929,11 +985,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 23%"></div>
+																		<div class="indicators-charts__chart" style="width: 18%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">23%</div>
+																	<div class="indicators-charts__val">18%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -948,11 +1004,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 15%"></div>
+																		<div class="indicators-charts__chart" style="width: 14%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">15%</div>
+																	<div class="indicators-charts__val">14%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -967,11 +1023,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 12%"></div>
+																		<div class="indicators-charts__chart" style="width: 10%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">12%</div>
+																	<div class="indicators-charts__val">10%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -989,50 +1045,63 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
-													</div>
-													<!-- /.indicators-text__desc -->
 
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															5:46 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															7:39 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															24,30%
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															Более 9 тысяч
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															18 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
 
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -1056,7 +1125,9 @@
 													</div>
 													<!-- /.form__input-wrap -->
 
-													<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Форма показатели по Екатеринбургу">
+													<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Форма показатели по
+
+											Екатеринбургу">
 													<button class="form__btn btn" type="submit">Заказать</button>
 													<!-- /.form__btn btn -->
 												</form>
@@ -1085,7 +1156,7 @@
 																<div class="indicators-block__circle">
 																	<div class="spb-month circle">
 																		<div class="circle__count">
-																			от 207 000
+																			от 25 000
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1117,7 +1188,7 @@
 																<div class="indicators-block__circle">
 																	<div class="spb-year circle">
 																		<div class="circle__count">
-																			1 328 158
+																			310,196
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1149,12 +1220,12 @@
 																<div class="indicators-block__circle">
 																	<div class="spb-sex circle">
 																		<div class="circle__count circle__count_male">
-																			37%
+																			41%
 																		</div>
 																		<!-- /.circle__count -->
 
 																		<div class="circle__count circle__count_female">
-																			63%
+																			59%
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1192,11 +1263,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 9%"></div>
+																		<div class="indicators-charts__chart" style="width: 8%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">9%</div>
+																	<div class="indicators-charts__val">8%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1211,11 +1282,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 40%"></div>
+																		<div class="indicators-charts__chart" style="width: 37%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">40%</div>
+																	<div class="indicators-charts__val">37%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1249,11 +1320,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 15%"></div>
+																		<div class="indicators-charts__chart" style="width: 17%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">15%</div>
+																	<div class="indicators-charts__val">17%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1268,11 +1339,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 12%"></div>
+																		<div class="indicators-charts__chart" style="width: 13%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">12%</div>
+																	<div class="indicators-charts__val">13%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1290,50 +1361,63 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
-													</div>
-													<!-- /.indicators-text__desc -->
 
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															3:01 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															3:88 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															27,70%
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															более 4 тысяч
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															12 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
 
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -1357,7 +1441,9 @@
 													</div>
 													<!-- /.form__input-wrap -->
 
-													<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Форма показатели по Санкт-Петербургу">
+													<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Форма показатели по
+
+											Санкт-Петербургу">
 													<button class="form__btn btn" type="submit">Заказать</button>
 													<!-- /.form__btn btn -->
 												</form>
@@ -1386,7 +1472,7 @@
 																<div class="indicators-block__circle">
 																	<div class="novosib-month circle">
 																		<div class="circle__count">
-																			от 207 000
+																			от 17 000
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1418,7 +1504,7 @@
 																<div class="indicators-block__circle">
 																	<div class="novosib-year circle">
 																		<div class="circle__count">
-																			1 328 158
+																			116,000
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1531,11 +1617,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 23%"></div>
+																		<div class="indicators-charts__chart" style="width: 24%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">23%</div>
+																	<div class="indicators-charts__val">24%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1550,11 +1636,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 15%"></div>
+																		<div class="indicators-charts__chart" style="width: 13%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">15%</div>
+																	<div class="indicators-charts__val">13%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1569,11 +1655,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 12%"></div>
+																		<div class="indicators-charts__chart" style="width: 10%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">12%</div>
+																	<div class="indicators-charts__val">10%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1591,50 +1677,63 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
-													</div>
-													<!-- /.indicators-text__desc -->
 
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															2:45 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															5:65 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															22,7%
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															более 8 тысяч
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															15 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
 
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -1686,7 +1785,7 @@
 																<div class="indicators-block__circle">
 																	<div class="samara-month circle">
 																		<div class="circle__count">
-																			от 207 000
+																			от 7 000
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1718,7 +1817,7 @@
 																<div class="indicators-block__circle">
 																	<div class="samara-year circle">
 																		<div class="circle__count">
-																			1 328 158
+																			37,025
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1750,12 +1849,12 @@
 																<div class="indicators-block__circle">
 																	<div class="samara-sex circle">
 																		<div class="circle__count circle__count_male">
-																			37%
+																			36%
 																		</div>
 																		<!-- /.circle__count -->
 
 																		<div class="circle__count circle__count_female">
-																			63%
+																			64%
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -1793,11 +1892,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 9%"></div>
+																		<div class="indicators-charts__chart" style="width: 8%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">9%</div>
+																	<div class="indicators-charts__val">8%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1812,11 +1911,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 40%"></div>
+																		<div class="indicators-charts__chart" style="width: 39%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">40%</div>
+																	<div class="indicators-charts__val">39%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1831,11 +1930,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 23%"></div>
+																		<div class="indicators-charts__chart" style="width: 22%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">23%</div>
+																	<div class="indicators-charts__val">22%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1850,11 +1949,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 15%"></div>
+																		<div class="indicators-charts__chart" style="width: 16%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">15%</div>
+																	<div class="indicators-charts__val">16%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -1891,50 +1990,63 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
-													</div>
-													<!-- /.indicators-text__desc -->
 
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															4:28 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															6:14 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															25,70%
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															более 1 тысячи
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															15 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
 
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -1987,7 +2099,7 @@
 																<div class="indicators-block__circle">
 																	<div class="nn-month circle">
 																		<div class="circle__count">
-																			от 207 000
+																			от 9 000
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -2019,7 +2131,7 @@
 																<div class="indicators-block__circle">
 																	<div class="nn-year circle">
 																		<div class="circle__count">
-																			1 328 158
+																			37,025
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -2051,12 +2163,12 @@
 																<div class="indicators-block__circle">
 																	<div class="nn-sex circle">
 																		<div class="circle__count circle__count_male">
-																			37%
+																			40%
 																		</div>
 																		<!-- /.circle__count -->
 
 																		<div class="circle__count circle__count_female">
-																			63%
+																			60%
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -2170,11 +2282,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 12%"></div>
+																		<div class="indicators-charts__chart" style="width: 10%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">12%</div>
+																	<div class="indicators-charts__val">10%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -2192,50 +2304,63 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
-													</div>
-													<!-- /.indicators-text__desc -->
 
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															2:54 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															4:02 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															30,40%
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															более 1 тысячи
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															14 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
 
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -2259,7 +2384,9 @@
 													</div>
 													<!-- /.form__input-wrap -->
 
-													<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Форма показатели по Нижнему Новгороду">
+													<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Форма показатели по Нижнему
+
+											Новгороду">
 													<button class="form__btn btn" type="submit">Заказать</button>
 													<!-- /.form__btn btn -->
 												</form>
@@ -2287,7 +2414,7 @@
 																<div class="indicators-block__circle">
 																	<div class="perm-month circle">
 																		<div class="circle__count">
-																			от 207 000
+																			от 1,310
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -2319,7 +2446,7 @@
 																<div class="indicators-block__circle">
 																	<div class="perm-year circle">
 																		<div class="circle__count">
-																			1 328 158
+																			1,310
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -2413,11 +2540,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 40%"></div>
+																		<div class="indicators-charts__chart" style="width: 44%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">40%</div>
+																	<div class="indicators-charts__val">44%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -2432,11 +2559,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 23%"></div>
+																		<div class="indicators-charts__chart" style="width: 22%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">23%</div>
+																	<div class="indicators-charts__val">22%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -2451,11 +2578,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 15%"></div>
+																		<div class="indicators-charts__chart" style="width: 13%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">15%</div>
+																	<div class="indicators-charts__val">13%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -2470,11 +2597,11 @@
 																	<div class="indicators-charts__chart-wrap">
 																		<div class="indicators-charts__chart_empty"></div>
 																		<!-- /.indicators-charts__chart_empty -->
-																		<div class="indicators-charts__chart" style="width: 12%"></div>
+																		<div class="indicators-charts__chart" style="width: 8%"></div>
 																		<!-- /.indicators-charts__chart -->
 																	</div>
 																	<!-- /.indicators-charts__chart-wrap -->
-																	<div class="indicators-charts__val">12%</div>
+																	<div class="indicators-charts__val">8%</div>
 																	<!-- /.indicators-charts__val -->
 																</div>
 																<!-- /.indicators-charts__row -->
@@ -2492,50 +2619,63 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
-													</div>
-													<!-- /.indicators-text__desc -->
 
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															3:29 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															5:18 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															29%
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															более 500
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															12 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
 
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -2651,12 +2791,12 @@
 																<div class="indicators-block__circle">
 																	<div class="ufa-sex circle">
 																		<div class="circle__count circle__count_male">
-																			37%
+																			31%
 																		</div>
 																		<!-- /.circle__count -->
 
 																		<div class="circle__count circle__count_female">
-																			63%
+																			69%
 																		</div>
 																		<!-- /.circle__count -->
 																	</div>
@@ -2792,50 +2932,63 @@
 												<!-- /.indicators-block__list -->
 
 												<div class="indicators-text">
-													<div class="indicators-text__title">
-														Cреднее время пребывания на сайте
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														5:46 минут
-													</div>
-													<!-- /.indicators-text__desc -->
 
-													<div class="indicators-text__title">
-														Глубина просмотра за время работы
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Cреднее время пребывания на сайте
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															5:46 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														7:39 минут
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Глубина просмотра за время работы
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															7:39 минут
+														</div>
+														<!-- /.indicators-text__desc -->
 													</div>
-													<!-- /.indicators-text__desc -->
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Отказы за все время работы сайта
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															26,16%
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Колличество зарегистрированных пользователей
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															Более 20 тысяч
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
+													<div class="indicators-text__item">
+														<div class="indicators-text__title">
+															Среднее кол-во позиций, добавляемых одним пользователем в корзину
+														</div>
+														<!-- /.indicators-text__title -->
+														<div class="indicators-text__desc">
+															18 разных позиций товаров
+														</div>
+														<!-- /.indicators-text__desc -->
+													</div>
+													<!-- /.indicators-text__item -->
 
-													<div class="indicators-text__title">
-														Отказы за все время работы сайта
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														26,16%
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Колличество зарегистрированных пользователей
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														Более 20 тысяч
-													</div>
-													<!-- /.indicators-text__desc -->
-
-													<div class="indicators-text__title">
-														Среднее кол-во позиций, добавляемых одним пользователем в корзину
-													</div>
-													<!-- /.indicators-text__title -->
-													<div class="indicators-text__desc">
-														18 разных позиций товаров
-													</div>
-													<!-- /.indicators-text__desc -->
 												</div>
 												<!-- /.indicators-text -->
 
@@ -2880,6 +3033,97 @@
 						<!-- /#indicators.indicators -->
 
 						<div class="map" id="map">
+
+							<div class="section__title">
+								Карта покрытия
+							</div>
+							<!-- /.section__title -->
+
+							<div class="map-timeline">
+								<div class="map-timeline__year">
+									2019
+								</div>
+								<!-- /.map-timeline__year -->
+
+
+								<div class="map-timeline__item">
+
+									<div class="map-timeline__month">
+
+										<div class="map-timeline__index">
+											1
+										</div>
+										<!-- /.map-timeline__index -->
+
+										МАРТ
+									</div>
+									<!-- /.map-timeline__month -->
+									<div class="map-timeline__desc">
+										Пермь
+									</div>
+									<!-- /.map-timeline__desc -->
+
+								</div>
+								<!-- /.map-timeline__item -->
+
+								<div class="map-timeline__item">
+
+
+									<div class="map-timeline__month">
+
+										<div class="map-timeline__index">
+											2
+										</div>
+										<!-- /.map-timeline__index -->
+
+										АПРЕЛЬ
+									</div>
+									<!-- /.map-timeline__month -->
+									<div class="map-timeline__desc">
+										Уфа
+									</div>
+									<!-- /.map-timeline__desc -->
+
+								</div>
+								<!-- /.map-timeline__item -->
+
+								<div class="map-timeline__item">
+
+
+									<div class="map-timeline__month">
+
+										<div class="map-timeline__index">
+											3
+										</div>
+										<!-- /.map-timeline__index -->
+
+										До конца года
+									</div>
+									<!-- /.map-timeline__month -->
+									<div class="map-timeline__desc">
+										Краснодар,
+									</div>
+									<!-- /.map-timeline__desc -->
+									<div class="map-timeline__desc">
+										Тюмень,
+									</div>
+									<!-- /.map-timeline__desc -->
+									<div class="map-timeline__desc">
+										Саратов,
+									</div>
+									<!-- /.map-timeline__desc -->
+									<div class="map-timeline__desc">
+										Ростов на Дону
+									</div>
+									<!-- /.map-timeline__desc -->
+
+								</div>
+								<!-- /.map-timeline__item -->
+
+
+							</div>
+							<!-- /.map-timeline -->
+
 							<svg width="1436" height="746" viewBox="0 0 1436 746" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M1138.34 147.543L1137.07 150.785L1140.14 152.767L1143.39 150.785L1142.31 146.642L1138.34 147.543Z" fill="#EDEEF0" />
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M854.745 237.437L860.157 241.581L862.682 237.798L863.584 234.555L860.518 232.573L856.91 232.033L854.745 237.437Z" fill="#EDEEF0" />
@@ -3185,32 +3429,714 @@
 									<rect x="347" y="238" width="155" height="73" fill="#000" fill-opacity="0" />
 								</g>
 
-								<g id="tumen" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт в 2019 году">
+								<g id="tumen" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт<br> в 2019 году">
 									<rect x="929" y="469" width="66" height="83" fill="#000" fill-opacity="0" />
 								</g>
-								<g id="saratov" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт в 2019 году">
+								<g id="saratov" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт<br> в 2019 году">
 									<rect x="666" y="557" width="63" height="57" fill="#000" fill-opacity="0" />
 								</g>
-								<g id="krasnodar" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт в 2019 году">
+								<g id="krasnodar" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт<br> в 2019 году">
 									<rect x="584" y="625" width="124" height="46" fill="#000" fill-opacity="0" />
 								</g>
-								<g id="rostov" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт в 2019 году">
+								<g id="rostov" data-tooltip="" data-offset="10" data-pos="top" data-event="hover" data-text="Старт<br> в 2019 году">
 									<rect x="504" y="531" width="111" height="73" fill="#000" fill-opacity="0" />
 								</g>
-
-
-
-
-
-
-
 
 							</svg>
 
 						</div>
 
+						<div class="platforms" id="platforms">
+
+							<div class="platforms__bg"></div>
+
+							<div class="platforms__section">
+								<div class="section__title">
+									Рекламные места
+								</div>
+								<!-- /.section__title -->
+
+								<div class="platforms__tabs">
+
+									<div class="tabs-menu" data-tabs>
+
+										<a class="tabs-menu__link active" href="#js-platforms-tabs-1" data-tabs-children>
+											<span>Рекламное место&nbsp;</span> №1
+										</a>
+
+										<a class="tabs-menu__link" href="#js-platforms-tabs-2" data-tabs-children>
+											<span>Рекламное место&nbsp;</span> №2
+										</a>
+
+
+										<a class="tabs-menu__link" href="#js-platforms-tabs-3" data-tabs-children>
+											<span>Рекламное место&nbsp;</span> №3
+										</a>
+
+
+										<a class="tabs-menu__link" href="#js-platforms-tabs-4" data-tabs-children>
+											<span>Рекламное место&nbsp;</span> №4
+										</a>
+
+
+										<a class="tabs-menu__link" href="#js-platforms-tabs-5" data-tabs-children>
+											<span>Рекламное место&nbsp;</span> №5
+										</a>
+
+										<a class="tabs-menu__link" href="#js-platforms-tabs-6" data-tabs-children>
+
+										Рекламная рассылка
+
+									</a>
+
+									</div>
+									<!-- /.tabs-menu -->
+
+								</div>
+								<!-- /.platforms__tabs -->
+
+								<div class="platforms__content">
+									<div class="tabs">
+										<div class="tabs__inner" id="js-platforms-tabs-1">
+											<div class="platforms-content">
+												<div class="platforms-content__inner">
+													<div class="platforms-content__content">
+														<div class="platforms-content__title">
+															Преимущества рекламного места №1
+														</div>
+														<!-- /.platforms-content__title -->
+
+														<ul class="platforms-content__list">
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">1</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	виден при открытии главной страницы
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">2</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	хорошо кликабельный баннер
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">3</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	есть воможность настроить отдельную страницу для всего ассортимента товаров при клике на баннер
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+														</ul>
+														<!-- /.platforms-content__list -->
+													</div>
+													<!-- /.platforms-content__content -->
+													<div class="platforms-content__pic-wrap">
+														<div class="platforms-content__pic-bg">
+															<img src="images/main-slider-bg.png" alt="">
+														</div>
+														<div class="platforms-content__pic">
+															<a data-fancybox="gallery" href="images/main-slider-max-1.jpg" data-caption="Рекламный баннер">
+																<img src="images/main-slider-1.jpg" alt="" class="platforms-content__img">
+															</a>
+														</div>
+														<!-- /.platforms-content__pic -->
+													</div>
+													<!-- /.platforms-content__pic-wrap -->
+												</div>
+												<!-- /.platforms-content__inner -->
+												<div class="platforms__form">
+
+													<div class="platforms__form-title">
+														Заказать это рекламное место
+													</div>
+													<!-- /.platforms__form-title -->
+
+													<div class="platforms__form-inner">
+
+
+														<form name="request" method="POST" action="php/function-send-form.php" class="sendler form form_platforms">
+															<div class="form__input-wrap">
+																<span class="form__input-tel">+7 |</span>
+																<!-- /.form__input-tel -->
+																<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+																<!-- /.form__input -->
+															</div>
+															<!-- /.form__input-wrap -->
+
+															<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Рекламное место 1">
+															<button class="form__btn btn" type="submit">Заказать</button>
+															<!-- /.form__btn btn -->
+														</form>
+														<!-- /.form .form_platforms -->
+
+
+													</div>
+													<!-- /.platforms__form-inner -->
+
+												</div>
+												<!-- /.platforms__form -->
+											</div>
+											<!-- /.platforms-content -->
+										</div>
+										<div class="tabs__inner" id="js-platforms-tabs-2">
+											<div class="platforms-content">
+												<div class="platforms-content__inner">
+													<div class="platforms-content__content">
+														<div class="platforms-content__title">
+															Преимущества рекламного места №2
+														</div>
+														<!-- /.platforms-content__title -->
+
+														<div class="platforms-content__sub-title">
+															Реклама в каталоге конкретного раздела
+														</div>
+														<!-- /.platforms-content__sub-title -->
+
+														<ul class="platforms-content__list">
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">1</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	самое кликабельное место на сайте
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">2</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	отдельная иконка под эту категорию
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">3</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	приоритет в списке категорий
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+														</ul>
+														<!-- /.platforms-content__list -->
+													</div>
+													<!-- /.platforms-content__content -->
+													<div class="platforms-content__pic-wrap">
+														<div class="platforms-content__pic-bg">
+															<img src="images/main-slider-bg.png" alt="">
+														</div>
+														<div class="platforms-content__pic">
+															<a data-fancybox="gallery2" href="images/main-slider-max-2.jpg" data-caption="Рекламный баннер 2">
+																<img src="images/main-slider-2.jpg" alt="" class="platforms-content__img">
+															</a>
+														</div>
+														<!-- /.platforms-content__pic -->
+													</div>
+													<!-- /.platforms-content__pic-wrap -->
+												</div>
+												<!-- /.platforms-content__inner -->
+												<div class="platforms__form">
+
+													<div class="platforms__form-title">
+														Заказать это рекламное место
+													</div>
+													<!-- /.platforms__form-title -->
+
+													<div class="platforms__form-inner">
+
+
+														<form name="request" method="POST" action="php/function-send-form.php" class="sendler form form_platforms">
+															<div class="form__input-wrap">
+																<span class="form__input-tel">+7 |</span>
+																<!-- /.form__input-tel -->
+																<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+																<!-- /.form__input -->
+															</div>
+															<!-- /.form__input-wrap -->
+
+															<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Рекламное место 2">
+															<button class="form__btn btn" type="submit">Заказать</button>
+															<!-- /.form__btn btn -->
+														</form>
+														<!-- /.form .form_platforms -->
+
+
+													</div>
+													<!-- /.platforms__form-inner -->
+
+												</div>
+												<!-- /.platforms__form -->
+											</div>
+											<!-- /.platforms-content -->
+										</div>
+										<div class="tabs__inner" id="js-platforms-tabs-3">
+											<div class="platforms-content">
+												<div class="platforms-content__inner">
+													<div class="platforms-content__content">
+														<div class="platforms-content__title">
+															Преимущества рекламного места №3
+														</div>
+														<!-- /.platforms-content__title -->
+
+														<p class="platforms-content__sub-title">
+															Реклама в каталоге продукции
+														</p>
+														<!-- /.platforms-content__sub-title -->
+														<ul class="platforms-content__list">
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">1</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	будет видна в выбранном разделе
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">2</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	часто просматривается
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">3</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	фиксация и приоритетный показ товара в блоке «Обратите внимание». Блок выводится в поиске при просмотре любого товара на сайте
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+														</ul>
+														<!-- /.platforms-content__list -->
+													</div>
+													<!-- /.platforms-content__content -->
+													<div class="platforms-content__pic-wrap">
+														<div class="platforms-content__pic-bg">
+															<img src="images/main-slider-bg.png" alt="">
+														</div>
+														<div class="platforms-content__pic">
+															<a data-fancybox="gallery3" href="images/main-slider-max-3.jpg" data-caption="Рекламный баннер 3">
+																<img src="images/main-slider-3.jpg" alt="" class="platforms-content__img">
+															</a>
+														</div>
+														<!-- /.platforms-content__pic -->
+													</div>
+													<!-- /.platforms-content__pic-wrap -->
+												</div>
+												<!-- /.platforms-content__inner -->
+												<div class="platforms__form">
+
+													<div class="platforms__form-title">
+														Заказать это рекламное место
+													</div>
+													<!-- /.platforms__form-title -->
+
+													<div class="platforms__form-inner">
+
+
+														<form name="request" method="POST" action="php/function-send-form.php" class="sendler form form_platforms">
+															<div class="form__input-wrap">
+																<span class="form__input-tel">+7 |</span>
+																<!-- /.form__input-tel -->
+																<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+																<!-- /.form__input -->
+															</div>
+															<!-- /.form__input-wrap -->
+
+															<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Рекламное место 3">
+															<button class="form__btn btn" type="submit">Заказать</button>
+															<!-- /.form__btn btn -->
+														</form>
+														<!-- /.form .form_platforms -->
+
+
+													</div>
+													<!-- /.platforms__form-inner -->
+
+												</div>
+												<!-- /.platforms__form -->
+											</div>
+											<!-- /.platforms-content -->
+										</div>
+										<div class="tabs__inner" id="js-platforms-tabs-4">
+											<div class="platforms-content">
+												<div class="platforms-content__inner">
+													<div class="platforms-content__content">
+														<div class="platforms-content__title">
+															Преимущества рекламного места №4
+														</div>
+														<!-- /.platforms-content__title -->
+														<p class="platforms-content__sub-title">
+															Реклама в разделе «красные ценники»
+														</p>
+														<!-- /.platforms-content__sub-title -->
+														<ul class="platforms-content__list">
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">1</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	выводятся акционные товары, которые чаще всего приоретают
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">2</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	видна при открытии главной страницы
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+														</ul>
+														<!-- /.platforms-content__list -->
+													</div>
+													<!-- /.platforms-content__content -->
+													<div class="platforms-content__pic-wrap">
+														<div class="platforms-content__pic-bg">
+															<img src="images/main-slider-bg.png" alt="">
+														</div>
+														<div class="platforms-content__pic">
+															<a data-fancybox="gallery4" href="images/main-slider-max-4.jpg" data-caption="Рекламный баннер 4">
+																<img src="images/main-slider-4.jpg" alt="" class="platforms-content__img">
+															</a>
+														</div>
+														<!-- /.platforms-content__pic -->
+													</div>
+													<!-- /.platforms-content__pic-wrap -->
+												</div>
+												<!-- /.platforms-content__inner -->
+												<div class="platforms__form">
+
+													<div class="platforms__form-title">
+														Заказать это рекламное место
+													</div>
+													<!-- /.platforms__form-title -->
+
+													<div class="platforms__form-inner">
+
+
+														<form name="request" method="POST" action="php/function-send-form.php" class="sendler form form_platforms">
+															<div class="form__input-wrap">
+																<span class="form__input-tel">+7 |</span>
+																<!-- /.form__input-tel -->
+																<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+																<!-- /.form__input -->
+															</div>
+															<!-- /.form__input-wrap -->
+
+															<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Рекламное место 4">
+															<button class="form__btn btn" type="submit">Заказать</button>
+															<!-- /.form__btn btn -->
+														</form>
+														<!-- /.form .form_platforms -->
+
+
+													</div>
+													<!-- /.platforms__form-inner -->
+
+												</div>
+												<!-- /.platforms__form -->
+											</div>
+											<!-- /.platforms-content -->
+										</div>
+										<div class="tabs__inner" id="js-platforms-tabs-5">
+											<div class="platforms-content">
+												<div class="platforms-content__inner">
+													<div class="platforms-content__content">
+														<div class="platforms-content__title">
+															Преимущества рекламного места №5
+														</div>
+														<!-- /.platforms-content__title -->
+														<p class="platforms-content__sub-title">
+															Рекламные баннеры в разделе «специальные предложения»
+														</p>
+														<!-- /.platforms-content__sub-title -->
+														<ul class="platforms-content__list">
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">1</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	хорошо работает для акций, а также промокодов
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+
+															<li class="platforms-content__item">
+																<div class="platforms-content__index">2</div>
+																<!-- /.platforms-content__index -->
+																<div class="platforms-content__text">
+																	есть воможность настроить отдельную страницу для всего ассортимента товаров при клике на баннер
+																</div>
+																<!-- /.platforms-content__text -->
+															</li>
+															<!-- /.platforms-content__item -->
+														</ul>
+														<!-- /.platforms-content__list -->
+													</div>
+													<!-- /.platforms-content__content -->
+													<div class="platforms-content__pic-wrap">
+														<div class="platforms-content__pic-bg">
+															<img src="images/main-slider-bg.png" alt="">
+														</div>
+														<div class="platforms-content__pic">
+															<a data-fancybox="gallery5" href="images/main-slider-max-5.jpg" data-caption="Рекламный баннер">
+																<img src="images/main-slider-5.jpg" alt="" class="platforms-content__img">
+															</a>
+														</div>
+														<!-- /.platforms-content__pic -->
+													</div>
+													<!-- /.platforms-content__pic-wrap -->
+												</div>
+												<!-- /.platforms-content__inner -->
+												<div class="platforms__form">
+
+													<div class="platforms__form-title">
+														Заказать это рекламное место
+													</div>
+													<!-- /.platforms__form-title -->
+
+													<div class="platforms__form-inner">
+
+
+														<form name="request" method="POST" action="php/function-send-form.php" class="sendler form form_platforms">
+															<div class="form__input-wrap">
+																<span class="form__input-tel">+7 |</span>
+																<!-- /.form__input-tel -->
+																<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+																<!-- /.form__input -->
+															</div>
+															<!-- /.form__input-wrap -->
+
+															<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Рекламное место 5">
+															<button class="form__btn btn" type="submit">Заказать</button>
+															<!-- /.form__btn btn -->
+														</form>
+														<!-- /.form .form_platforms -->
+
+
+													</div>
+													<!-- /.platforms__form-inner -->
+
+												</div>
+												<!-- /.platforms__form -->
+											</div>
+											<!-- /.platforms-content -->
+										</div>
+										<div class="tabs__inner" id="js-platforms-tabs-6">
+											<div class="platforms-content platforms-content_mail">
+												<div class="platforms-content__inner">
+													<div class="platforms-content__content">
+														<div class="platforms-content__title">
+															Рекламная рассылка
+														</div>
+														<!-- /.platforms-content__title -->
+
+														<p class="platform-content__text">
+															Рассылается раз в неделю. Есть возможность использовать текст и баннеры клиента. Также мы предоставляем услуги полного написания креативного текста, и отрисовку баннеров.
+														</p>
+														<div class="platforms-content__indicator-row">
+															<div class="platforms-content__indicator">
+																<div class="mailing-views circle">
+																	<div class="circle__count">
+																		до 40%
+																	</div>
+																	<!-- /.circle__count -->
+																	<div class="circle__desc">
+																		<span>Просмотры</span>
+																	</div>
+																	<!-- /.circle__desc -->
+																</div>
+
+															</div>
+															<!-- /.platforms-content__indicator -->
+
+															<div class="platforms-content__indicator">
+																<div class="mailing-transitions circle">
+																	<div class="circle__count">
+																		до 17%
+																	</div>
+																	<!-- /.circle__count -->
+																	<div class="circle__desc orange">
+																		<span>Переходов</span>
+																	</div>
+																	<!-- /.circle__desc -->
+																</div>
+															</div>
+															<!-- /.platforms-content__indicator -->
+														</div>
+														<!-- /.platforms-content__indicator-row -->
+
+													</div>
+													<!-- /.platforms-content__content -->
+													<div class="platforms-content__pic-wrap">
+														<div class="platforms-content__pic">
+															<a data-fancybox="gallery5" href="images/mail-platform.jpg" data-caption="Рекламный баннер">
+																<img src="images/mail-platform.jpg" alt="" class="platforms-content__img">
+															</a>
+														</div>
+														<!-- /.platforms-content__pic -->
+													</div>
+													<!-- /.platforms-content__pic-wrap -->
+												</div>
+												<!-- /.platforms-content__inner -->
+												<div class="platforms__form">
+
+													<div class="platforms__form-title">
+														Заказать это рекламное место
+													</div>
+													<!-- /.platforms__form-title -->
+
+													<div class="platforms__form-inner">
+
+
+														<form name="request" method="POST" action="php/function-send-form.php" class="sendler form form_platforms">
+															<div class="form__input-wrap">
+																<span class="form__input-tel">+7 |</span>
+																<!-- /.form__input-tel -->
+																<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+																<!-- /.form__input -->
+															</div>
+															<!-- /.form__input-wrap -->
+
+															<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Рекламное место 5">
+															<button class="form__btn btn" type="submit">Заказать</button>
+															<!-- /.form__btn btn -->
+														</form>
+														<!-- /.form .form_platforms -->
+
+
+													</div>
+													<!-- /.platforms__form-inner -->
+
+												</div>
+												<!-- /.platforms__form -->
+											</div>
+											<!-- /.platforms-content -->
+										</div>
+
+									</div>
+									<!-- /.tabs  -->
+								</div>
+								<!-- /.platforms__content -->
+							</div>
+							<!-- /.platforms__section -->
+						</div>
+						<!-- /#platforms.platforms -->
+
+						<div class="partners" id="partners">
+
+							<div class="partners__bg"></div>
+							<!-- /.partners__bg -->
+
+							<div class="partners__section">
+								<div class="partners__content">
+									<div class="section__title">
+										Наши партнеры
+									</div>
+									<!-- /.section__title -->
+
+									<ul class="partners__list">
+										<li class="partners__item">
+											<div class="partners__pic">
+												<img src="images/partner-1.svg" alt="" class="partners__img">
+												<!-- /.partners__img -->
+											</div>
+											<!-- /.partners__pic -->
+										</li>
+										<!-- /.partners__item -->
+										<li class="partners__item">
+											<div class="partners__pic">
+												<img src="images/partner-2.svg" alt="" class="partners__img">
+												<!-- /.partners__img -->
+											</div>
+											<!-- /.partners__pic -->
+										</li>
+										<!-- /.partners__item -->
+									</ul>
+									<!-- /.partners__list -->
+								</div>
+								<!-- /.partners__content -->
+							</div>
+							<!-- /.partners__section -->
+						</div>
+						<!-- /#partners.partners -->
+
 					</div>
 					<!-- /.container -->
+
+					<div class="mobile-menu js-mobile-menu">
+						<div class="container">
+							<div class="mobile-menu__inner">
+								<!--<a href="" class="mobile-menu__close js-mobile-menu-close"><span></span></a>-->
+								<!-- /.mobile-menu__close -->
+								<div class="mobile-menu__desc">
+									Данная навигация поможет Вам быстрее переместиться к интересующему блоку
+								</div>
+								<!-- /.mobile-menu__desc -->
+								<ul class="mobile-menu__list">
+									<li class="mobile-menu__item">
+										<a href="" class="mobile-menu__link">
+						Почему мы
+					</a>
+										<!-- /.mobile-menu__link -->
+									</li>
+									<!-- /.mobile-menu__item -->
+									<li class="mobile-menu__item">
+										<a href="" class="mobile-menu__link">
+						Наши показатели
+					</a>
+										<!-- /.mobile-menu__link -->
+									</li>
+									<!-- /.mobile-menu__item -->
+									<li class="mobile-menu__item">
+										<a href="" class="mobile-menu__link">
+						Наши перспективы
+					</a>
+										<!-- /.mobile-menu__link -->
+									</li>
+									<!-- /.mobile-menu__item -->
+									<li class="mobile-menu__item">
+										<a href="" class="mobile-menu__link">
+						Все о рекламных местах
+					</a>
+										<!-- /.mobile-menu__link -->
+									</li>
+									<!-- /.mobile-menu__item -->
+								</ul>
+								<!-- /.mobile-menu__list -->
+							</div>
+							<!-- /.mobile-menu__inner -->
+
+						</div>
+						<!-- /.container -->
+					</div>
+					<!-- /.mobile-menu -->
 
 					<!-- END WORKAREA -->
 				</div>
@@ -3223,11 +4149,6 @@
 
 	</div>
 	<!-- /.wrapper -->
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-	<script>
-		var toolTimeline = new TimelineMax({repeat: -1, repeatDelay: 10});
-	</script>
 
 	<div class="footer" id="js-footer">
 
@@ -3329,8 +4250,103 @@
 	<!-- /.footer -->
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script>
+		function circleFillOpts(el, emptyFill, fill, val, delay) {
+			$(el).circleProgress({
+				startAngle: -Math.PI / 4 * 3,
+				size: 137,
+				value: 0,
+				lineCap: 'round',
+				emptyFill: emptyFill,
+				fill: {color: fill}
+			});
+			setTimeout(function() { $(el).circleProgress('value', val); }, delay);
+		}
+		
+		function circles() {
+			
+			/* =============================================================================================================
+				Все города
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.all-month', '#E6EAF0', '#B4D239', 0.33, 500);// 33%
+			circleFillOpts('.all-year', '#E6EAF0', '#B4D239', 0.40, 500);
+			circleFillOpts('.all-sex', '#FEA32A', '#B4D239', 0.63, 500);
+			
+			
+			/* =============================================================================================================
+				Екатеринбург
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.ekat-month', '#E6EAF0', '#B4D239', 0.33, 500);
+			circleFillOpts('.ekat-year', '#E6EAF0', '#B4D239', 0.50, 500);
+			circleFillOpts('.ekat-sex', '#FEA32A', '#B4D239', 0.50, 500);
+			
+			
+			/* =============================================================================================================
+				Санкт-Петербург
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.spb-month', '#E6EAF0', '#B4D239', 0.33, 500);
+			circleFillOpts('.spb-year', '#E6EAF0', '#B4D239', 0.50, 500);
+			circleFillOpts('.spb-sex', '#FEA32A', '#B4D239', 0.50, 500);
+			
+			
+			/* =============================================================================================================
+				Новосибирск
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.novosib-month', '#E6EAF0', '#B4D239', 0.33, 500);
+			circleFillOpts('.novosib-year', '#E6EAF0', '#B4D239', 0.50, 500);
+			circleFillOpts('.novosib-sex', '#FEA32A', '#B4D239', 0.50, 500);
+			
+			
+			/* =============================================================================================================
+				Самара
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.samara-month', '#E6EAF0', '#B4D239', 0.33, 500);
+			circleFillOpts('.samara-year', '#E6EAF0', '#B4D239', 0.50, 500);
+			circleFillOpts('.samara-sex', '#FEA32A', '#B4D239', 0.50, 500);
+			
+			
+			/* =============================================================================================================
+				Нижний Новгород
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.nn-month', '#E6EAF0', '#B4D239', 0.33, 500);
+			circleFillOpts('.nn-year', '#E6EAF0', '#B4D239', 0.50, 500);
+			circleFillOpts('.nn-sex', '#FEA32A', '#B4D239', 0.50, 500);
+			
+			
+			/* =============================================================================================================
+				Пермь
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.perm-month', '#E6EAF0', '#B4D239', 0.33, 500);
+			circleFillOpts('.perm-year', '#E6EAF0', '#B4D239', 0.50, 500);
+			circleFillOpts('.perm-sex', '#FEA32A', '#B4D239', 0.50, 500);
+			
+			
+			/* =============================================================================================================
+				Уфа
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.ufa-month', '#E6EAF0', '#B4D239', 0.33, 500);
+			circleFillOpts('.ufa-year', '#E6EAF0', '#B4D239', 0.50, 500);
+			circleFillOpts('.ufa-sex', '#FEA32A', '#B4D239', 0.50, 500);
+			
+			/* =============================================================================================================
+				Рекламная рассылка (ПРОСМОТРЫ)
+				(класс элемента, цвет заливки пустой области, цвет заливки активной области, значение графика, время задержки)
+	=============================================================================================================*/
+			circleFillOpts('.mailing-views', '#E6EAF0', '#B4D239', 0.40, 500);
+			circleFillOpts('.mailing-transitions', '#E6EAF0', '#FEA32A', 0.17, 500);
+		}
+	</script>
+
 	<script type="text/javascript" src="js/script.min.js"></script>
-	<script type="text/javascript" src="js/frontend-works.js"></script>
 
 	<script src="https://yastatic.net/browser-updater/v1/script.js" charset="utf-8"></script>
 	<script>

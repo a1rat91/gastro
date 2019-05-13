@@ -9,48 +9,44 @@
 		display: flex;
 		justify-content: space-around;
 	}
-
+	
 	&__link {
 		display: block;
 		color: #fff;
 		padding: 5px 15px;
 		font-size: 14px;
+		white-space: nowrap;
 		
 		&:hover {
 			color: #fff;
 		}
 	}
 	
-	&__phone {
-		font-weight: 800;
-		color: #ffffff;
-		padding: 5px 15px;
-		font-size: 14px;
+	@media all and (max-width: $screen-xl) {
+		
+		&__link {
+			padding: 5px 9px;
+			font-size: 13px;
+		}
 	}
-
-	@media(max-width: 768px) {
-		transform: scale(0);
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		transition:transform 0.3s;
-
-		&.active {
-			transform: scale(1);
-			background: #3B3B3B;
-			z-index: 10;
+	
+	@media all and (max-width: $screen-lg) {
+		
+		nav {
+			display: none;
 		}
-
-		&__list {
-			flex-direction: column;
-			align-items: center;
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
-
-		&__item + &__item {
-			margin-top: 10px;
-		}
+		
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
+	
+	@media all and (max-width: $screen-sm) {
+	
+	}
+	
+	@media all and (max-width: $screen-xs) {
+	
 	}
 }

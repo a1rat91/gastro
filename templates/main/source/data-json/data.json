@@ -1,7 +1,13 @@
 {
 	"data": {
 		"menu": {
-			"top": [
+			"href": [
+				"about",
+				"indicators",
+				"platforms",
+				"map"
+			],
+			"text": [
 				"Почему мы",
 				"Наши показатели",
 				"Все о рекламных местах",

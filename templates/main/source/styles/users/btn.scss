@@ -6,10 +6,34 @@
 	border-radius: 50px;
 	font-size: 14px;
 	
-	.menu & {
+	.header & {
 		background: #FFFFFF;
 		color: #518300;
 		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 		margin-left: 15px;
+	}
+	
+	
+	@media all and (max-width: $screen-xl) {
+		
+		.header & {
+			font-size: 12px;
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+	
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
+	
+	@media all and (max-width: $screen-sm) {
+	
+	}
+	
+	@media all and (max-width: $screen-xs) {
+	
 	}
 }

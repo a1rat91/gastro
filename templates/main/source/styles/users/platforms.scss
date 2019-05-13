@@ -1,0 +1,44 @@
+.platforms {
+	position: relative;
+	z-index: 2;
+	max-width: 1059px;
+	margin: 0 auto;
+	
+	&__bg {
+		position: absolute;
+		background: #f5f7f9;
+		left: -100%;
+		right: -100%;
+		height: 100%;
+		width: 300%;
+		z-index: -1;
+	}
+	
+	&__section {
+		padding: 60px 0;
+	}
+	
+	&__form {
+		background: $accent-color;
+		padding: 35px;
+	}
+	
+	&__form-inner {
+		max-width: 508px;
+		margin: 0 auto;
+	}
+	
+	&__form-title {
+		font-weight: 800;
+		font-size: 18px;
+		color: #ffffff;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	@media all and (max-width: $screen-xl) {
+		&__section {
+			padding-bottom: 30px;
+		}
+	}
+}

@@ -1,18 +1,72 @@
 .main-slider {
-	max-width: 424px;
+	max-width: 431px;
 	position: absolute;
-	top: 3px;
-	left: 51px;
+	top: -49px;
+	left: 58px;
 	
 	&__img {
 		@include img-responsive()
 	}
 	
 	&__prev {
-		left: -860px;
+		left: -840px;
 	}
 	
 	&__next {
 		right: -290px;
+	}
+	
+	&__link {
+		display: block;
+	}
+	
+	&__slide-desc {
+		position: absolute;
+		right: 55px;
+		text-align: right;
+		bottom: 300px;
+		font-size: 14px;
+	}
+	
+	@media all and (max-width: 1600px) {
+		
+		&__prev,
+		&__next {
+			display: none;
+		}
+		
+	}
+	
+	@media all and (max-width: $screen-xl) {
+		max-width: 362px;
+		position: absolute;
+		top: -49px;
+		left: 49px;
+		
+		&__slide-desc {
+			bottom: 255px;
+			right: 40px;
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		left: 50%;
+		transform: translateX(-50%);
+		
+		&__slide-desc {
+			right: 0;
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
+	
+	@media all and (max-width: $screen-sm) {
+	
+	}
+	
+	@media all and (max-width: $screen-xs) {
+	
 	}
 }

@@ -40,6 +40,27 @@
 		position: relative;
 	}
 	
+	&__slider-bg {
+		
+		width: 548px;
+		
+		img {
+			@include img-responsive();
+		}
+		
+		&:before {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 0;
+			background: url("../images/border.png");
+			left: 50px;
+			z-index: 4;
+		}
+	}
+	
 	&__prev {
 		left: -186px;
 	}
@@ -57,5 +78,80 @@
 	
 	&__form {
 		max-width: 390px;
+	}
+	
+	@media all and (max-width: $screen-xl) {
+		
+		padding: 100px 0 80px;
+		
+		&__title {
+			font-size: 30px;
+		}
+		
+		&__title-wrap {
+			margin-bottom: 35px;
+		}
+		
+		&__slider-bg {
+			width: 460px;
+			
+			&:before {
+				width: 18px;
+				height: 17px;
+				top: 0px;
+				left: 42px;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		flex-direction: column;
+		padding-top: 60px;
+		
+		&__left,
+		&__right {
+			width: 100%;
+			text-align: center;
+		}
+		
+		&__left {
+			margin-bottom: 80px;
+		}
+		
+		&__title-wrap {
+			max-width: 571px;
+			margin: 0 auto 35px;
+		}
+		
+		&__sub-title {
+			margin-bottom: 20px;
+		}
+		
+		&__form,
+		&__slider-bg {
+			margin: 0 auto;
+		}
+		
+		&__slider-bg {
+			position: relative;
+		}
+		
+		&__shadow {
+			display: none;
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
+	
+	@media all and (max-width: $screen-sm) {
+	
+	}
+	
+	@media all and (max-width: $screen-xs) {
+	
 	}
 }

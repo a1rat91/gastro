@@ -18,4 +18,43 @@
 	&__desc {
 	
 	}
+	
+	@media all and (max-width: $screen-xl) {
+		
+		&__title {
+			font-size: 45px;
+		}
+		
+		&__desc {
+			font-size: 14px;
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		
+		justify-content: center;
+		padding-bottom: 20px;
+		
+		&__col {
+			width: calc(100%/3);
+			padding-right: 0;
+			text-align: center;
+		}
+		
+		&__desc {
+			font-size: 16px;
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
+	
+	@media all and (max-width: $screen-sm) {
+	
+	}
+	
+	@media all and (max-width: $screen-xs) {
+	
+	}
 }

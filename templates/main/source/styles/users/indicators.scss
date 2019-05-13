@@ -1,5 +1,6 @@
 .indicators {
 	position: relative;
+	z-index: 2;
 	
 	&__bg {
 		position: absolute;
@@ -13,12 +14,6 @@
 	
 	&__section {
 		padding: 60px 0;
-	}
-	
-	&__title {
-		font-weight: 800;
-		font-size: 25px;
-		text-align: center;
 	}
 	
 	&__tabs {
@@ -40,5 +35,22 @@
 		font-size: 18px;
 		margin-bottom: 15px;
 		text-align: center;
+	}
+	
+	@media all and (max-width: $screen-xl) {
+		&__row {
+			align-items: flex-start;
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		&__section {
+			padding: 40px 0;
+		}
+		
+		&__row {
+			align-items: center;
+			flex-direction: column;
+		}
 	}
 }

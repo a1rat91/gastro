@@ -12,3 +12,30 @@ $pink: #d2008b;
 $red: #e30000;
 
 $main-page-padding: 125px;
+
+$screen-xs:                   0 !default;
+$screen-sm:                   480px !default;
+$screen-md:                   768px !default;
+$screen-lg:                   992px !default;
+$screen-xl:                   1200px !default;
+$screen-xxl:                  1800px !default;
+
+@media all and (max-width: $screen-xl) {
+
+}
+
+@media all and (max-width: $screen-lg) {
+
+}
+
+@media all and (max-width: $screen-md) {
+
+}
+
+@media all and (max-width: $screen-sm) {
+
+}
+
+@media all and (max-width: $screen-xs) {
+
+}

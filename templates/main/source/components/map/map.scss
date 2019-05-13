@@ -1,0 +1,21 @@
+.map {
+	padding-top: 60px;
+	
+	svg {
+		width: calc(100% + 200px);
+		margin-top: -150px;
+		margin-left: -80px;
+		margin-right: -80px;
+	}
+	
+	@media all and (max-width: $screen-xl) {
+		
+		svg {
+			margin-left: 0;
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		display: none;
+	}
+}

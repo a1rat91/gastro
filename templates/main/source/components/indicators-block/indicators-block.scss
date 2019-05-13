@@ -67,4 +67,56 @@
 		}
 	}
 	
+	@media all and (max-width: $screen-xl) {
+		margin-right: 25px;
+		margin-bottom: 20px;
+		min-height: 294px;
+		
+		&__circle-desc {
+			
+			span {
+				margin-left: 20px;
+			}
+		}
+	}
+	
+	@media all and (max-width: 1007px) {
+		min-height: 315px;
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		min-height: 319px;
+		margin-left: 18px;
+		margin-right: 18px;
+		margin-bottom: 34px;
+		padding: 30px;
+		
+		&__content {
+			flex-direction: column;
+		}
+		
+		&__title {
+			margin-bottom: 20px;
+			min-height: 38px;
+			text-align: center;
+			margin-left: -1px;
+			margin-right: -1px;
+		}
+		
+		&__circle-desc {
+			display: flex;
+			
+			.indicators-block_sex & {
+				span:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+		
+		&__list {
+			width: 100%;
+			padding: 0 40px;
+		}
+	}
+	
 }

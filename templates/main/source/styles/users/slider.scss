@@ -25,7 +25,7 @@
 		font-weight: 500;
 		font-size: 20px;
 		width: auto!important;
-		top: -45px;
+		top: 15px;
 		bottom: auto!important;
 		left: auto!important;
 		right: -75px;
@@ -54,4 +54,14 @@
 			right: 0%;
 		}
 	}
+	
+	
+	/*Tablets (max 992)*/
+	@media all and (max-width: $screen-lg){
+		
+		&__pagination {
+			right: -90px;
+		}
+	}
+	
 }

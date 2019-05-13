@@ -1,0 +1,142 @@
+.platforms-content {
+	background: #ffffff;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	
+	
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 400px;
+		padding: 70px 60px 50px;
+		
+		.platforms-content_mail & {
+			padding-bottom: 30px;
+		}
+	}
+	
+	&__content {
+		width: 45%;
+		
+		.platforms-content_mail & {
+			width: 50%;
+		}
+		
+	}
+	
+	&__pic-wrap {
+		width: 55%;
+		position: relative;
+		
+		.platforms-content_mail & {
+			margin-top: -50px;
+			width: 50%;
+		}
+	}
+	
+	&__pic-bg {
+		width: 500px;
+		
+		img {
+			@include img-responsive();
+		}
+	}
+	
+	&__pic {
+		position: absolute;
+		top: 6px;
+		left: 53px;
+		width: 394px;
+		border-radius: 10px 10px 0 0;
+		overflow: hidden;
+		
+		.platforms-content_mail & {
+			width: 289px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	
+	&__img {
+		@include img-responsive();
+	}
+	
+	&__item {
+		display: flex;
+	}
+	
+	&__index {
+		background: #FFFFFF;
+		box-shadow: 0px 0px 20px rgba(0, 14, 86, 0.1);
+		font-size: 18px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 20px;
+	}
+	
+	&__list,
+	&__item {
+		margin: 0;
+		padding: 0;
+	}
+	
+	&__item {
+		margin-bottom: 20px;
+	}
+	
+	&__title {
+		color: rgba(50, 50, 50, 0.5);
+		font-size: 16px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	
+	&__sub-title {
+		margin-bottom: 20px;
+	}
+	
+	&__text {
+		max-width: 220px;
+	}
+	
+	&__indicator-row {
+		display: flex;
+		margin-left: -33px;
+		margin-right: -33px;
+	}
+	
+	&__indicator {
+		margin-left: 33px;
+		margin-right: 33px;
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		
+		&__inner {
+			flex-direction: column;
+		}
+		
+		&__content,
+		&__pic-wrap {
+			width: 100%;
+		}
+		
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		&__item {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+	}
+}

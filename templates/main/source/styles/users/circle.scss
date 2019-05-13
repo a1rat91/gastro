@@ -69,4 +69,88 @@
 			color: $accent-color;
 		}
 	}
+	
+	&__desc {
+		font-size: 14px;
+		padding-left: 53px;
+		position: relative;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			height: 4px;
+			width: 40px;
+			display: block;
+			border-radius: 4px;
+			background: #b4d239;
+		}
+		
+		&.orange {
+			&:before {
+				background: $orange;
+			}
+		}
+	}
+	
+	@media all and (max-width: $screen-xl) {
+		
+		width: 100px;
+		
+		canvas {
+			width: 100px!important;
+			height: 100px!important;
+		}
+		
+		&__count {
+			font-size: 14px;
+			
+			&_male {
+				top: 20px;
+				left: 20px;
+			}
+			
+			&_female {
+				bottom: 20px;
+				right: 20px;
+			}
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		width: 138px;
+		margin-bottom: 20px;
+		
+		canvas {
+			width: 138px!important;
+			height: 138px !important;
+		}
+		
+		&__count {
+			font-size: 18px;
+			
+			&_male {
+				top: 30px;
+				left: 30px;
+			}
+			
+			&_female {
+				bottom: 30px;
+				right: 30px;
+			}
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
+	
+	@media all and (max-width: $screen-sm) {
+	
+	}
+	
+	@media all and (max-width: $screen-xs) {
+	
+	}
 }

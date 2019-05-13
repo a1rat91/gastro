@@ -32,4 +32,41 @@
 		transform: translateY(-105%);
 		left: 100px;
 	}
+	
+	@media all and (max-width: $screen-xl) {
+		padding: 0;
+		
+		&__title:before {
+			left: 0;
+			top: auto;
+			bottom: -20px;
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		&__shadow {
+			display: none;
+		}
+		
+		&__title {
+			margin: 0 auto 40px;
+			text-align: center;
+			
+			&:before {
+				display: none;
+			}
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
+	
+	@media all and (max-width: $screen-sm) {
+	
+	}
+	
+	@media all and (max-width: $screen-xs) {
+	
+	}
 }

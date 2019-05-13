@@ -1,0 +1,12 @@
+.section {
+	
+	padding: 60px 0;
+	
+	&__title {
+		font-weight: 800;
+		font-size: 25px;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+	}
+}

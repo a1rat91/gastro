@@ -2,9 +2,15 @@
 	line-height: 1;
 	display: flex;
 	
+	.platforms & {
+		padding: 50px 0px;
+		justify-content: space-between;
+	}
+	
 	&__link {
-		display: block;
+		display: flex;
 		padding: 17px 15px;
+		justify-content: center;
 		//padding: 17px 20px;
 		text-decoration: none;
 		background: #FFFFFF;
@@ -14,9 +20,32 @@
 		transition: background 500ms, color 500ms;
 		margin: 0 1px 0 0;
 		text-align: center;
+		position: relative;
+		font-size: 18px;
+		color: rgba(50, 50, 50, 0.5);
+		white-space: nowrap;
+		
+		.platforms & {
+			padding: 17px 20px;
+			
+		}
+		
+		span {
+			width: 0;
+			height: 0;
+			display: inline-block;
+			overflow: hidden;
+			transition: width .8s;
+		}
 		
 		&.active {
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+			
+			span {
+				width: auto;
+				height: auto;
+				transition: width .8s;
+			}
 			
 			&:before {
 				z-index: 1;
@@ -65,5 +94,20 @@
 	&__slider {
 		padding: 50px 15px;
 		margin: 0 65px;
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		&__slider {
+			padding: 40px 15px;
+		}
+		
+		&__link {
+			font-size: 17px;
+			
+			.platforms__tabs & {
+				font-size: 16px;
+				padding: 15px 17px;
+			}
+		}
 	}
 }

@@ -6,4 +6,11 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	position: relative;
+	height: 100%;
+	
+	@media all and (max-width: $screen-lg) {
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }

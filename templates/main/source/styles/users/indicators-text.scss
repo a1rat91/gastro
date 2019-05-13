@@ -12,7 +12,29 @@
 	
 	&__desc {
 		font-size: 18px;
+		font-weight: 800;
 		color: #000000;
 		margin-bottom: 30px;
+	}
+	
+	@media all and (max-width: $screen-xl) {
+		
+		&__title {
+			font-size: 15px;
+		}
+	}
+	
+	@media all and (max-width: $screen-lg) {
+		
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 40px;
+		
+		&__item {
+			width: 50%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 }
