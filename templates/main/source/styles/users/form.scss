@@ -63,4 +63,10 @@
 			margin: 0 auto;
 		}
 	}
+	
+	@media all and (max-width: $screen-lg) {
+		&__input-wrap {
+			max-width: 508px;
+		}
+	}
 }

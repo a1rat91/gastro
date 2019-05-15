@@ -42,4 +42,10 @@
 			padding-bottom: 80px;
 		}
 	}
+	
+	@media all and (max-width: $screen-lg) {
+		&__section {
+			padding: 30px 0 60px;
+		}
+	}
 }

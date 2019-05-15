@@ -1,0 +1,52 @@
+.mobile-timeline {
+	
+	@media all and (min-width: $screen-lg) {
+		
+		display: none;
+	}
+	
+	padding-top: 60px;
+	padding-bottom: 45px;
+	
+	&__item {
+		margin-top: 20px;
+	}
+	
+	&__year {
+		background: #b4d239;
+		border-radius: 50px;
+		width: 118px;
+		height: 34px;
+		color: #fff;
+		letter-spacing: .05em;
+		margin-bottom: 17px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba(#000, .1);
+		margin-bottom: 15px;
+		
+		&:last-child {
+			border-bottom-color: transparent;
+		}
+	}
+	
+	&__month,
+	&__city {
+		line-height: 1.65;
+	}
+	
+	&__city,
+	&__desc {
+		color: rgba(#323232, .5);
+	}
+	
+	&__desc {
+		max-width: 196px;
+	}
+}

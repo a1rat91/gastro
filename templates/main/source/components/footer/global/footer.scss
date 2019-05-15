@@ -49,5 +49,59 @@
 			color: #ffffff;
 		}
 	}
-
+	
+	@media all and (max-width: $screen-lg) {
+		
+		&__inner {
+			flex-direction: column;
+		}
+		
+		&__left,
+		&__right {
+			width: 100%;
+		}
+		
+		&__row {
+			flex-wrap: wrap;
+		}
+		
+		&__col {
+			width: 50%;
+			display: flex;
+			margin-bottom: 20px;
+			
+			&:nth-child(1) {
+				order: 0;
+			}
+			
+			&:nth-child(2) {
+				order: 1;
+			}
+			
+			&:nth-child(3) {
+				order: 2;
+			}
+			
+			&:nth-child(3),
+			&:nth-child(4) {
+				justify-content: flex-end;
+			}
+		}
+		
+		&__contact-link {
+			
+			width: 34px;
+			height: 34px;
+			text-indent: -9999px;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 0;
+			background: url(../images/phone.svg);
+			position: absolute;
+			
+			&_email {
+				background: url(../images/mail.svg);
+			}
+		}
+	}
 }
