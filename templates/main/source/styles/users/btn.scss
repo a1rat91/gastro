@@ -13,6 +13,15 @@
 		margin-left: 15px;
 	}
 	
+	&_sticky {
+		background: $accent-color;
+		color: #ffffff;
+		display: flex;
+		justify-content: center;
+		max-width: 320px;
+		margin: 0 auto 60px;
+	}
+	
 	
 	@media all and (max-width: $screen-xl) {
 		

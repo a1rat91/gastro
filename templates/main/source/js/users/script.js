@@ -69,6 +69,37 @@ $(document).ready(function () {
 			}
 		}
 	});
+	
+	// (function () {
+	// 	var mainPageH = $('#js-main-section').height();
+	// 	var stickyBtn = $('#js-sticky-btn');
+	//
+	// 		$(document).on('scroll', function () {
+	//
+	// 			var stickyBtnTop = stickyBtn.offset().top,
+	// 				documentScroll = $(this).scrollTop() + stickyBtnTop;
+	//
+	// 			console.log(stickyBtnTop, 'btn offset top');
+	// 			console.log(documentScroll, 'document scroll');
+	//
+	// 			if (documentScroll < stickyBtnTop) {
+	//
+	// 				stickyBtn.addClass('fixed');
+	// 			}
+	// 		});
+	// })();
+	
+	// init controller
+	var controller = new ScrollMagic.Controller();
+
+// create a scene
+	new ScrollMagic.Scene({
+		duration: 100,    // the scene should last for a scroll distance of 100px
+		offset: 50    // start this scene after scrolling for 50px
+	})
+		.setPin("#js-sticky-btn") // pins the element for the the scene's duration
+		.addTo(controller); // assign the scene to the controller
+	
 
 	$("[type=tel]").inputmask("(999) 999-99-99");
 	
