@@ -15,11 +15,27 @@
 	
 	&_sticky {
 		background: $accent-color;
-		color: #ffffff;
+		color: #fff;
 		display: flex;
 		justify-content: center;
 		max-width: 320px;
-		margin: 0 auto 60px;
+		margin: 0 auto 20px;
+		position: relative;
+		z-index: 1;
+		
+		&.sticky {
+			position: fixed;
+			bottom: 10px;
+			width: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		
+		&.sticky-end {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 	
 	

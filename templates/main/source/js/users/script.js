@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	
 	window.globalPopup = new Popup();
 	
 	$('#js-hamburger').click(function () {
@@ -49,6 +49,59 @@ $(document).ready(function () {
 		}
 	});
 	
+	var stickyBtn = $('#js-sticky-btn'),
+		mainPage = $('#js-main-section'),
+		mainPageH = mainPage.height(),
+		stickyBtnHeight = stickyBtn.height(),
+		finalSection = $('#js-indicators'),
+		btnOffsetTop = stickyBtn.offset().top,
+		target = finalSection.offset().top - 110;
+	
+	$('.test').css('top', finalSection.offset().top - 110);
+	console.log(stickyBtnHeight, 'stickyBtnHeight');
+	
+	$(document).on('scroll', function () {
+		var documentScroll = $(this).scrollTop(),
+			documentScrollBottom = documentScroll + mainPageH + stickyBtnHeight + 15;
+		
+		console.log(documentScroll, 'documentScroll');
+		console.log(btnOffsetTop, 'btnOffsetTop');
+		console.log(documentScrollBottom, 'documentScrollBottom');
+		console.log(target, 'target');
+		
+		
+		
+		// if (documentScrollBottom > mainPageH + 180) {
+		if (btnOffsetTop < documentScrollBottom && documentScrollBottom < target - 200) {
+			stickyBtn.addClass('sticky');
+			mainPage.addClass('sticky');
+			stickyBtn.removeClass('sticky-end');
+			mainPage.removeClass('sticky-end');
+		} else if (documentScrollBottom >= target){
+			console.log('sticky-end');
+			stickyBtn.removeClass('sticky');
+			mainPage.removeClass('sticky');
+			stickyBtn.addClass('sticky-end');
+			mainPage.addClass('sticky-end');
+			$('.sticky-end').css('top', target - 200 + 'px');
+		}else {
+			stickyBtn.removeClass('sticky');
+			mainPage.removeClass('sticky');
+			stickyBtn.removeClass('sticky-end');
+			mainPage.removeClass('sticky-end');
+		}
+		
+		// if (documentScroll > stickyBtnPos) {
+		//
+		// 	stickyBtn.addClass('fixed');
+		// 	stickyBtn.css('top', stickyBtnH);
+		// } else {
+		//
+		// 	stickyBtn.removeClass('fixed');
+		// 	stickyBtn.css('top', stickyBtnPos + menuH);
+		// }
+	});
+	
 	var tabsMenuSwiper = new Swiper('.js-tabs-menu-slider', {
 		slidesPerView: 5,
 		slidesPerGroup: 1,
@@ -89,18 +142,7 @@ $(document).ready(function () {
 	// 		});
 	// })();
 	
-	// init controller
-	var controller = new ScrollMagic.Controller();
-
-// create a scene
-	new ScrollMagic.Scene({
-		duration: 100,    // the scene should last for a scroll distance of 100px
-		offset: 50    // start this scene after scrolling for 50px
-	})
-		.setPin("#js-sticky-btn") // pins the element for the the scene's duration
-		.addTo(controller); // assign the scene to the controller
 	
-
 	$("[type=tel]").inputmask("(999) 999-99-99");
 	
 	
@@ -125,7 +167,7 @@ $(document).ready(function () {
 		
 		if ($(this).attr('href') == '#js-platforms-tabs-1') {
 			$('.platforms__tabs .tabs-menu').children()[0].click();
-		} else if($(this).attr('href') == '#js-platforms-tabs-2') {
+		} else if ($(this).attr('href') == '#js-platforms-tabs-2') {
 			$('.platforms__tabs .tabs-menu').children()[1].click();
 		} else if ($(this).attr('href') == '#js-platforms-tabs-3') {
 			$('.platforms__tabs .tabs-menu').children()[2].click();
@@ -140,5 +182,5 @@ $(document).ready(function () {
 		return false;
 		
 	});
-
+	
 });
