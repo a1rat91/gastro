@@ -47,3 +47,13 @@ a:hover {
 .fixed {
 	position: fixed;
 }
+
+
+.sticky {
+	position: fixed;
+	z-index: 101;
+}
+.stop {
+	position: relative;
+	z-index: 101;
+}

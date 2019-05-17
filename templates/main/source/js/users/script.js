@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	
 	window.globalPopup = new Popup();
 	
 	$('#js-hamburger').click(function () {
@@ -70,37 +70,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	// (function () {
-	// 	var mainPageH = $('#js-main-section').height();
-	// 	var stickyBtn = $('#js-sticky-btn');
-	//
-	// 		$(document).on('scroll', function () {
-	//
-	// 			var stickyBtnTop = stickyBtn.offset().top,
-	// 				documentScroll = $(this).scrollTop() + stickyBtnTop;
-	//
-	// 			console.log(stickyBtnTop, 'btn offset top');
-	// 			console.log(documentScroll, 'document scroll');
-	//
-	// 			if (documentScroll < stickyBtnTop) {
-	//
-	// 				stickyBtn.addClass('fixed');
-	// 			}
-	// 		});
-	// })();
 	
-	// init controller
-	var controller = new ScrollMagic.Controller();
-
-// create a scene
-	new ScrollMagic.Scene({
-		duration: 100,    // the scene should last for a scroll distance of 100px
-		offset: 50    // start this scene after scrolling for 50px
-	})
-		.setPin("#js-sticky-btn") // pins the element for the the scene's duration
-		.addTo(controller); // assign the scene to the controller
-	
-
 	$("[type=tel]").inputmask("(999) 999-99-99");
 	
 	
@@ -125,7 +95,7 @@ $(document).ready(function () {
 		
 		if ($(this).attr('href') == '#js-platforms-tabs-1') {
 			$('.platforms__tabs .tabs-menu').children()[0].click();
-		} else if($(this).attr('href') == '#js-platforms-tabs-2') {
+		} else if ($(this).attr('href') == '#js-platforms-tabs-2') {
 			$('.platforms__tabs .tabs-menu').children()[1].click();
 		} else if ($(this).attr('href') == '#js-platforms-tabs-3') {
 			$('.platforms__tabs .tabs-menu').children()[2].click();
@@ -140,5 +110,71 @@ $(document).ready(function () {
 		return false;
 		
 	});
-
+	
+	(function () {
+		
+		var mainSection = document.querySelector('#js-main-section'),
+			winH = window.document.documentElement.clientHeight - 50;
+		
+		console.log(winH);
+		
+		var a = document.querySelector('#js-sticky-btn'),
+			b = null,
+			P; // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+		
+		var scrollPos = 0;
+		$(window).scroll(function(){
+			var st = $(this).scrollTop();
+			if (st > scrollPos){
+				P = winH + 50; //down
+			} else {
+				P = winH; //up
+			}
+			scrollPos = st;
+		});
+		
+		window.addEventListener('scroll', Ascroll, false);
+		document.body.addEventListener('scroll', Ascroll, false);
+		
+		function Ascroll() {
+			if (b == null) {
+				var Sa = getComputedStyle(a, ''), s = '';
+				for (var i = 0; i < Sa.length; i++) {
+					if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+						s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
+					}
+				}
+				b = document.createElement('div');
+				b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+				a.insertBefore(b, a.firstChild);
+				var l = a.childNodes.length;
+				for (var i = 1; i < l; i++) {
+					b.appendChild(a.childNodes[1]);
+				}
+				a.style.height = b.getBoundingClientRect().height + 'px';
+				a.style.padding = '0';
+				a.style.border = '0';
+			}
+			var Ra = a.getBoundingClientRect(),
+				R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('#js-indicators').getBoundingClientRect().top + 10);
+			// селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
+			if ((Ra.top - P) <= 0) {
+				if ((Ra.top - P) <= R) {
+					b.className = 'stop';
+					b.style.top = -R + 'px';
+				} else {
+					b.className = 'sticky';
+					b.style.top = P + 'px';
+				}
+			} else {
+				b.className = '';
+				b.style.top = '';
+			}
+			window.addEventListener('resize', function () {
+				a.children[0].style.width = getComputedStyle(a, '').width;
+				winH = window.document.documentElement.clientHeight - 50;
+			}, false);
+		}
+	})();
+	
 });

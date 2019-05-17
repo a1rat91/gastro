@@ -14,13 +14,29 @@
 	}
 	
 	&_sticky {
-		background: $accent-color;
+		
 		color: #ffffff;
 		display: flex;
 		justify-content: center;
 		max-width: 320px;
 		margin: 0 auto 60px;
+		transition: .5s;
+		
+		&.hidden-tablet {
+			background: none;
+		}
+		
+		.sticky {
+			transition: top .5s;
+		}
+		
+		div {
+			
+			background: $accent-color!important;
+		}
 	}
+	
+	
 	
 	
 	@media all and (max-width: $screen-xl) {
