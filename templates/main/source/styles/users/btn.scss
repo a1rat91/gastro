@@ -14,30 +14,26 @@
 	}
 	
 	&_sticky {
-		background: $accent-color;
-		color: #fff;
+		color: #ffffff;
 		display: flex;
 		justify-content: center;
 		max-width: 320px;
-		margin: 0 auto 20px;
-		position: relative;
-		z-index: 1;
+		margin: 0 auto 30px;
+		transition: .5s;
 		
-		&.sticky {
-			position: fixed;
-			bottom: 10px;
-			width: 100%;
-			left: 50%;
-			transform: translateX(-50%);
+		&.hidden-tablet {
+			background: none;
 		}
 		
-		&.sticky-end {
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
+		.sticky {
+			transition: top .5s;
+		}
+		
+		div {
+			text-align: center;
+			background: $accent-color!important;
 		}
 	}
-	
 	
 	@media all and (max-width: $screen-xl) {
 		

@@ -48,9 +48,24 @@
 			padding: 40px 0;
 		}
 		
+		&__title {
+		
+		}
+		
 		&__row {
 			align-items: center;
 			flex-direction: column;
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+		&__tabs {
+			padding-top: 40px;
+		}
+		
+		&__form-title {
+			font-size: 22px;
+			margin-bottom: 20px;
 		}
 	}
 }

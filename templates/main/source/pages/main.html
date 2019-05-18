@@ -59,7 +59,7 @@
 					
 					<div class="about" id="js-about">
 						
-						<a href="#" id="js-sticky-btn" class="btn btn_sticky">Заказать рекламное место</a>
+						<a href="#" data-url="ajax/callback.html" data-ajax="" id="js-sticky-btn" class="btn btn_sticky hidden-md">Заказать рекламное место</a>
 						
 						<div class="about__head">
 							<div class="about__title">
@@ -72,7 +72,6 @@
 							<!-- /.about__shadow -->
 						</div>
 						<!-- /.about__head -->
-						
 						
 						<div class="about-advantage">
 							<div class="about-advantage__col">
@@ -223,19 +222,6 @@
 					</div>
 					<!-- /#about.about -->
 					
-					<div class="test"></div>
-					<style>
-						.test {
-							position: absolute;
-							height: 5px;
-							width: 200px;
-							background: red;
-							z-index: 22;
-						}
-					</style>
-					
-					
-					
 					<div class="indicators" id="js-indicators">
 						
 						<div class="indicators__bg"></div>
@@ -297,7 +283,7 @@
 								
 								<!-- Add Arrows -->
 								<div
-									class="swiper-button-prev js-tabs-menu-prev js-tabs-menu-prev swiper-button-disabled">
+									class="swiper-button-prev js-tabs-menu-prev tabs-menu-prev swiper-button-disabled">
 									{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="prev") }}
 								</div>
 								<div class="swiper-button-next js-tabs-menu-next tabs-menu__next">

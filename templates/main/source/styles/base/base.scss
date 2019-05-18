@@ -30,7 +30,7 @@ a:hover {
 	
 	display: block;
 	
-	@media all and (min-width: $screen-xl) {
+	@media all and (min-width: 1201px) {
 		display: none;
 	}
 }
@@ -39,11 +39,27 @@ a:hover {
 	
 	display: block;
 	
-	@media all and (min-width: $screen-lg) {
+	@media all and (min-width: 993px) {
+		display: none;
+	}
+}
+
+.hidden-md {
+	@media all and (min-width: 769px) {
 		display: none;
 	}
 }
 
 .fixed {
 	position: fixed;
+}
+
+
+.sticky {
+	position: fixed;
+	z-index: 101;
+}
+.stop {
+	position: relative;
+	z-index: 101;
 }

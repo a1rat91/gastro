@@ -28,4 +28,10 @@
 		border-bottom: 1px solid #666;
 	}
 	
+	@media all and (max-width: $screen-md) {
+		&__inner {
+			padding-bottom: 60px;
+		}
+	}
+	
 }

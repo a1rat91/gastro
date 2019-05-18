@@ -119,4 +119,23 @@
 		}
 	}
 	
+	@media all and (max-width: $screen-md) {
+		
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 20px;
+		
+		&__title {
+			font-size: 14px;
+		}
+		
+		&__list {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		&__item {
+			width: 100%;
+		}
+	}
 }

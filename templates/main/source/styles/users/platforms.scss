@@ -46,4 +46,12 @@
 			margin-right: -20px;
 		}
 	}
+	
+	@media all and (max-width: $screen-lg) {
+	
+	}
+	
+	@media all and (max-width: $screen-md) {
+		padding-top: 40px;
+	}
 }

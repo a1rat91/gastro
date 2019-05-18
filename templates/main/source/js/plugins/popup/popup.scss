@@ -136,4 +136,15 @@
 		-ms-overflow-scrolling: auto;
 		overflow-scrolling: auto;
 	}
+	
+	@media all and (max-width: $screen-sm) {
+		&__table {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		&__close {
+			width: 25px;
+		}
+	}
 }

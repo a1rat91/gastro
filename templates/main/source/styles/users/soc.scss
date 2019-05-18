@@ -26,4 +26,34 @@
 	&__pic {
 	
 	}
+	
+	@media all and (max-width: $screen-lg) {
+		
+		padding-top: 20px;
+		
+		&__item,
+		&__link,
+		&__pic {
+			width: 31px;
+			height: 31px;
+			display: block;
+		}
+		
+		&__item {
+			padding: 0;
+			margin: 0 18px;
+			
+			&:first-child {
+				margin-left: 0;
+			}
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+	
+	}
 }

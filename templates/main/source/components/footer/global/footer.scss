@@ -52,6 +52,8 @@
 	
 	@media all and (max-width: $screen-lg) {
 		
+		padding: 20px 0 40px;
+		
 		&__inner {
 			flex-direction: column;
 		}
@@ -63,6 +65,7 @@
 		
 		&__row {
 			flex-wrap: wrap;
+			position: relative;
 		}
 		
 		&__col {
@@ -87,6 +90,12 @@
 				justify-content: flex-end;
 			}
 		}
+		&__col {
+			&_mail,
+			&_phone {
+				margin: 0;
+			}
+		}
 		
 		&__contact-link {
 			
@@ -98,10 +107,38 @@
 			padding: 0;
 			background: url(../images/phone.svg);
 			position: absolute;
+			top: 0;
+			right: 64px;
 			
 			&_email {
+				right: 0;
 				background: url(../images/mail.svg);
 			}
+		}
+		
+		&__right {
+			margin-top: -52px;
+		}
+		
+		&__develop {
+			text-align: right;
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+		
+		&__right {
+			margin-top: 0;
+			justify-content: center;
+		}
+		
+		&__develop {
+			text-align: center;
+		}
+		
+		&__col_soc {
+			width: 100%;
+			justify-content: center;
 		}
 	}
 }

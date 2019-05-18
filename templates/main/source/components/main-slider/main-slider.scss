@@ -59,11 +59,16 @@
 	}
 	
 	@media all and (max-width: $screen-md) {
-	
+		width: 340px;
+		max-width: 100%;
+		
+		&__slide-desc {
+			bottom: 240px;
+		}
 	}
 	
 	@media all and (max-width: $screen-sm) {
-	
+		width: 235px;
 	}
 	
 	@media all and (max-width: $screen-xs) {

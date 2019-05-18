@@ -47,7 +47,17 @@
 	}
 	
 	@media all and (max-width: $screen-md) {
-	
+		padding-bottom: 80px;
+		max-width: 400px;
+		margin: 0 auto;
+		
+		&__title {
+			font-size: 34px;
+		}
+		
+		&__col {
+			width: 50%;
+		}
 	}
 	
 	@media all and (max-width: $screen-sm) {

@@ -1,11 +1,23 @@
 <div class="menu" id="js-menu" aria-expanded="false">
 	<nav>
 		<ul class="menu__list">
-			{% for item in data.menu.text %}
+			
 			<li class="menu__item">
-				<a href="#about" class="menu__link js-anim-scroll">{{ item }}</a>
+				<a href="#js-about" class="menu__link js-anim-scroll">Почему мы</a>
 			</li>
-			{% endfor %}
+			
+			<li class="menu__item">
+				<a href="#js-indicators" class="menu__link js-anim-scroll">Наши показатели</a>
+			</li>
+			
+			<li class="menu__item">
+				<a href="#js-platforms" class="menu__link js-anim-scroll">Все о рекламных местах</a>
+			</li>
+			
+			<li class="menu__item">
+				<a href="#js-map" class="menu__link js-anim-scroll">Наши перспективы</a>
+			</li>
+		
 		</ul>
 	</nav>
 </div>

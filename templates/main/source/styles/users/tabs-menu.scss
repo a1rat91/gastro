@@ -80,11 +80,34 @@
 		display: none;
 		padding: 10px 30px;
 		text-decoration: none;
-		background: #ccc;
+		background: #fff;
 		color: #000;
 		margin: 0 0 1px;
 		cursor: pointer;
 		transition: background 500ms, color 500ms;
+		position: relative;
+		
+		&:after {
+			content: "";
+			width: 12px;
+			height: 7px;
+			display: block;
+			position: absolute;
+			background: red;
+			top: 50%;
+			z-index: 1;
+			right: 15px;
+			transform: translateY(-50deg);
+			background: svg-load('tab-arrow.svg', fill='#000') no-repeat;
+			transition: .5s;
+		}
+		
+		&.active {
+			&:after {
+				background: svg-load('tab-arrow.svg', fill='#fff') no-repeat;
+				transform: rotate(180deg) translateY(50%);
+			}
+		}
 		
 		@media (max-width: 767px) {
 			display: block;
@@ -108,6 +131,22 @@
 				font-size: 16px;
 				padding: 15px 17px;
 			}
+		}
+	}
+	
+	@media all and (max-width: $screen-md) {
+		
+		.platforms & {
+			padding-top: 40px;
+			padding-bottom: 0;
+		}
+		
+		&__slider {
+			display: none;
+		}
+		
+		&__xslink {
+			margin-bottom: 20px;
 		}
 	}
 }

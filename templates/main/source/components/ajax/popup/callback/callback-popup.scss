@@ -7,4 +7,12 @@
 		margin: 0 auto 35px;
 		font-size: 18px;
 	}
+	
+	@media all and (max-width: $screen-md) {
+		padding: 90px 40px 70px;
+	}
+	
+	@media all and (max-width: $screen-sm) {
+		padding: 60px 20px 47px;
+	}
 }
