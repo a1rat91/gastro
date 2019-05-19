@@ -46,4 +46,18 @@
 	&__desc {
 		max-width: 196px;
 	}
+	
+	@media all and (max-width: $screen-md) {
+		padding-bottom: 0;
+	}
+	
+	@media all and (max-width: $screen-sm) {
+		&__year {
+			margin-bottom: 15px;
+		}
+		
+		&__row {
+			margin-bottom: 10px;
+		}
+	}
 }

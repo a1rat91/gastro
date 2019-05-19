@@ -9,6 +9,7 @@
 		margin: 0 auto;
 		max-width: 1200px;
 		display: flex;
+		align-items: center;
 	}
 	
 	&__left {
@@ -29,17 +30,45 @@
 		justify-content: space-between;
 	}
 	
+	&__col {
+		position: relative;
+	}
+	
 	&__contact-link {
 		color: #ffffff;
 		font-size: 14px;
 		font-weight: 800;
+		position: relative;
+		padding-left: 28px;
+		
+		&:before {
+			content: '';
+			display: block;
+			width: 15px;
+			height: 18px;
+			position: absolute;
+			left: 2px;
+			top: 50%;
+			transform: translateY(-50%);
+			
+		}
+		.footer__col_phone & {
+			&:before {
+				
+				background: svg-load('footer-phone.svg', fill='#fff') no-repeat center;
+			}
+		}
 		
 		&_email {
-			font-size: 16px;
+			&:before {
+				font-size: 16px;
+				background: svg-load('footer-mail.svg', fill='#fff') no-repeat center;
+			}
 		}
 	}
 	
 	&__develop {
+		line-height: 1.45;
 		b {
 			display: block;
 		}
@@ -122,6 +151,9 @@
 		
 		&__develop {
 			text-align: right;
+			font-size: 15px;
+			line-height: 1.45;
+			
 		}
 	}
 	
@@ -139,6 +171,14 @@
 		&__col_soc {
 			width: 100%;
 			justify-content: center;
+		}
+	}
+	
+	@media all and (max-width: $screen-sm) {
+		
+		&__contact-link {
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 }

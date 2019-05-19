@@ -41,6 +41,10 @@
 		&__section {
 			padding-bottom: 80px;
 		}
+		
+		&__list {
+			margin-top: 32px;
+		}
 	}
 	
 	@media all and (max-width: $screen-lg) {
@@ -52,7 +56,11 @@
 	@media all and (max-width: $screen-md) {
 		&__section {
 			padding-top: 0;
-			padding-bottom: 50px;
+			padding-bottom: 40px;
+		}
+		
+		&__item {
+			margin-bottom: 20px;
 		}
 	}
 }

@@ -10,17 +10,29 @@
 		font-size: 25px;
 		font-weight: 800;
 		max-width: 463px;
-		margin-bottom: 55px;
+		margin-bottom: 66px;
 		position: relative;
+		
+		//top: 40px;
+		//opacity: 0;
 		
 		&:before {
 			content: '';
 			position: absolute;
 			height: 4px;
 			background: $accent-color;
-			width: 41px;
+			width: 100%;
+			max-width: 41px;
 			left: -55px;
-			top: 15px;
+			top: 19px;
+		}
+		
+		&.active {
+			&:before {
+				animation-delay: 1.5s;
+				animation: width 6s ease-in infinite;
+				animation-iteration-count: 1;
+			}
 		}
 	}
 	
@@ -30,8 +42,10 @@
 		font-size: 180px;
 		font-weight: 800;
 		line-height: 1;
-		transform: translateY(-105%);
-		left: 100px;
+		transform: translateY(-84%);
+		left: 117px;
+		
+		opacity: 0;
 	}
 	
 	@media all and (max-width: $screen-xl) {
@@ -65,9 +79,17 @@
 	
 	@media all and (max-width: $screen-sm) {
 	
+		&__title {
+			line-height: 1.4;
+			margin-bottom: 28px;
+		}
 	}
 	
 	@media all and (max-width: $screen-xs) {
 	
 	}
+}
+@keyframes width {
+	from{width: 0}
+	to{width:100%}
 }

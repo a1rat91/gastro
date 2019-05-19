@@ -28,6 +28,7 @@
 									«вГастроном»
 								</h1>
 								<!-- /.main-section__title -->
+								<!--<div class="overlay"></div>-->
 							</div>
 							<!-- /.main-section__title-wrap -->
 							
@@ -284,10 +285,19 @@
 								<!-- Add Arrows -->
 								<div
 									class="swiper-button-prev js-tabs-menu-prev tabs-menu-prev swiper-button-disabled">
-									{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="prev") }}
+									<div class="slider__btn slider__btn_next">
+										<svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.9869 7.17188L13.0743 1.3686M18.9869 7.17188L13.2997 12.9692M18.9869 7.17188L0.0147315 7.35128" stroke-width="1.5"/>
+										</svg>
+									</div>
+									
 								</div>
 								<div class="swiper-button-next js-tabs-menu-next tabs-menu__next">
-									{{ sliderBtn.sliderBtn(class="slider", nextOrPrev="next") }}
+									<div class="slider__btn slider__btn_prev">
+										<svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.9869 7.17188L13.0743 1.3686M18.9869 7.17188L13.2997 12.9692M18.9869 7.17188L0.0147315 7.35128" stroke-width="1.5"/>
+										</svg>
+									</div>
 								</div>
 							
 							</div>

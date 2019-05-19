@@ -27,6 +27,8 @@ $(document).ready(function () {
 		speed: 1500,
 		slidesPerView: 1,
 		parallax: true,
+		autoResize: false,
+		resizeReInit: true,
 		autoplay: {
 			delay: 200000,
 			disableOnInteraction: false,
@@ -44,16 +46,27 @@ $(document).ready(function () {
 			992: {
 				pagination: {
 					el: '.swiper-pagination',
-					type: 'bullets'
+					type: 'bullets',
 				}
 			}
+		},
+		on: {
+			resize: function () {
+				console.log(this, 'swiper resized');
+				this.update();
+			}
 		}
+	});
+	
+	$(window).resize(function(){
+		
+		mainSwiper.update();
 	});
 
 	/* Tabs Swiper
 	======================================== */
 	var clientWidthTabs = document.documentElement.clientWidth;
-	if (clientWidthTabs > 768) {
+	if (clientWidthTabs > 767) {
 		var tabsMenuSwiper = new Swiper('.js-tabs-menu-slider', {
 			slidesPerView: 5,
 			slidesPerGroup: 1,
@@ -128,4 +141,41 @@ $(document).ready(function () {
 		
 	});
 	
+	/* Cool animation with ScrollMagic and GSAP */
+	
+	var mapPinAnimate = new TimelineMax({repeat: -1, repeatDelay: 0, yoyo: true});
+
+	mapPinAnimate
+		.fromTo('.map-pin',	1,
+			{delay: 0, yPercent﻿: -5, ease : Linear.easeInOut},
+			{yPercent﻿: -25, ease : Linear.easeInOut});
+
+	var controller = new ScrollMagic.Controller();
+	var animateIn = new TimelineMax();
+	var aboutTitleRule = CSSRulePlugin.getRule(".about__title:before");
+
+	animateIn
+		.to('.about__shadow', 0.5, {opacity: 1, ease: Linear.easeIn});
+
+	var scene = new ScrollMagic.Scene({
+		triggerElement: "#js-about"
+	})
+		.setClassToggle(".about__title", "active") // add class toggle
+		.addIndicators()
+		.setTween(animateIn).addTo(controller);
+	
+	
+	var indicatorsController = new ScrollMagic.Controller();
+	var indicatorsAnimation = new TimelineMax();
+	
+	var indicatordScene = new ScrollMagic.Scene({
+		triggerElement: ".indicators__row"
+	})
+		.on('start', function () {
+			console.log("passed trigger");
+			circles();
+		})
+		.addIndicators()
+		.setTween(indicatorsAnimation).addTo(indicatorsController);
 });
+

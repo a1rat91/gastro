@@ -53,7 +53,12 @@
 		}
 	}
 	
-	@media all and (max-width: $screen-md) {
-	
+	@media all and (max-width: $screen-sm) {
+		
+		width: 100%;
+		
+		&__list {
+			justify-content: space-between;
+		}
 	}
 }

@@ -48,10 +48,20 @@
 	}
 	
 	@media all and (max-width: $screen-lg) {
-	
+		&__section {
+			padding-top: 42px;
+		}
 	}
 	
 	@media all and (max-width: $screen-md) {
 		padding-top: 40px;
+	}
+	
+	@media all and (max-width: $screen-sm) {
+		padding-top: 53px;
+		
+		&__section {
+			padding-bottom: 40px;
+		}
 	}
 }

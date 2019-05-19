@@ -34,4 +34,10 @@
 		}
 	}
 	
+	@media all and (max-width: $screen-sm) {
+		&__inner {
+			padding-bottom: 37px;
+		}
+	}
+	
 }

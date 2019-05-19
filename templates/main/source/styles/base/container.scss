@@ -13,4 +13,9 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	
+	@media all and (max-width: $screen-md) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }

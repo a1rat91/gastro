@@ -47,7 +47,9 @@
 	}
 	
 	@media all and (max-width: $screen-md) {
-	
+		&_sticky {
+			margin-bottom: 15px;
+		}
 	}
 	
 	@media all and (max-width: $screen-sm) {

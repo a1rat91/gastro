@@ -17,6 +17,10 @@
 			border: 1.5px solid $accent-color;
 			box-sizing: border-box;
 			box-shadow: 0 0 20px rgba( $accent-color ,.1);
+			//background: svg-load('tabs-slider-arrow.svg', fill='#000') no-repeat;
+			path {
+				stroke: $accent-color;
+			}
 		}
 	}
 	
@@ -25,10 +29,10 @@
 		font-weight: 500;
 		font-size: 20px;
 		width: auto!important;
-		top: 15px;
+		top: 7px;
 		bottom: auto!important;
 		left: auto!important;
-		right: -75px;
+		right: -83px;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;

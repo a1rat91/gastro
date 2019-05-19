@@ -61,4 +61,9 @@
 		display: block;
 		margin-left: 20px;
 	}
+	
+	@media all and (max-width: $screen-md) {
+		
+		margin-left: 12px;
+	}
 }

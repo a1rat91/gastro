@@ -51,10 +51,12 @@
 	
 	@media all and (max-width: $screen-lg) {
 		left: 50%;
+		max-width: 431px;
 		transform: translateX(-50%);
 		
 		&__slide-desc {
 			right: 0;
+			bottom: 300px;
 		}
 	}
 	
@@ -68,10 +70,6 @@
 	}
 	
 	@media all and (max-width: $screen-sm) {
-		width: 235px;
-	}
-	
-	@media all and (max-width: $screen-xs) {
-	
+		width: 228px;
 	}
 }

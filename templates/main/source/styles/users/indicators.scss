@@ -22,6 +22,7 @@
 	
 	&__row {
 		display: flex;
+		margin-bottom: 8px;
 		
 	}
 	
@@ -45,7 +46,7 @@
 	
 	@media all and (max-width: $screen-lg) {
 		&__section {
-			padding: 40px 0;
+			padding: 40px 0 60px;
 		}
 		
 		&__title {
@@ -66,6 +67,16 @@
 		&__form-title {
 			font-size: 22px;
 			margin-bottom: 20px;
+		}
+	}
+	
+	@media all and (max-width: $screen-sm) {
+		&__tabs {
+			padding-top: 25px;
+		}
+		
+		&__section {
+			padding: 40px 0 17px;
 		}
 	}
 }

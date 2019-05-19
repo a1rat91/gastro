@@ -3,7 +3,7 @@
 	display: flex;
 	
 	.platforms & {
-		padding: 50px 0px;
+		padding: 33px 0 47px;
 		justify-content: space-between;
 	}
 	
@@ -38,6 +38,21 @@
 			transition: width .8s;
 		}
 		
+		&:before {
+			content: "";
+			position: absolute;
+			height: 16px;
+			width: 16px;
+			border-radius: 4px;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%,-50%) rotate(45deg);
+			background: transparent;
+			margin-bottom: 20px;
+			transition: .2s;
+			z-index: -1;
+		}
+		
 		&.active {
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 			
@@ -48,18 +63,8 @@
 			}
 			
 			&:before {
-				z-index: 1;
-				content: "";
-				position: absolute;
-				height: 16px;
-				width: 16px;
-				-webkit-transform: rotate(-45deg);
-				border-radius: 4px;
-				bottom: 0;
-				left: 50%;
-				transform: translate(-50%,-50%) rotate(45deg);
 				background: $accent-color;
-				margin-bottom: -16px;
+				margin-bottom: -15px;
 			}
 		}
 		
@@ -115,7 +120,7 @@
 	}
 	
 	&__slider {
-		padding: 50px 15px;
+		padding: 42px 15px 50px;
 		margin: 0 65px;
 	}
 	
@@ -132,6 +137,10 @@
 				padding: 15px 17px;
 			}
 		}
+		
+		.platforms & {
+			padding: 22px 0 47px;
+		}
 	}
 	
 	@media all and (max-width: $screen-md) {
@@ -147,6 +156,17 @@
 		
 		&__xslink {
 			margin-bottom: 20px;
+		}
+	}
+	
+	@media all and (max-width: $screen-sm) {
+		
+		&__xslink {
+			font-size: 18px;
+		}
+		
+		.platforms & {
+			padding-top: 23px;
 		}
 	}
 }

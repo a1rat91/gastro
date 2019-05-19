@@ -4,7 +4,7 @@
 	margin-right: 40px;
 	margin-bottom: 40px;
 	padding: 35px;
-	min-height: 294px;
+	min-height: 300px;
 	
 	&__list {
 		display: flex;
@@ -22,7 +22,8 @@
 		font-weight: 800;
 		color: rgba(50, 50, 50, 0.5);
 		margin-bottom: 35px;
-		min-height: 50px;
+		min-height: 30px;
+		line-height: 1.65;
 	}
 	
 	&__content {
@@ -99,8 +100,8 @@
 			margin-bottom: 20px;
 			min-height: 38px;
 			text-align: center;
-			margin-left: -1px;
-			margin-right: -1px;
+			margin-left: -2px;
+			margin-right: -2px;
 		}
 		
 		&__circle-desc {
@@ -136,6 +137,13 @@
 		
 		&__item {
 			width: 100%;
+		}
+	}
+	
+	@media all and (max-width: $screen-sm) {
+		
+		&__title {
+			font-size: 16px;
 		}
 	}
 }
