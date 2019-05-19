@@ -1,0 +1,40 @@
+.decor {
+	position: absolute;
+	z-index: 10;
+	
+	&_1 {
+		top: 0px;
+		right: 30%;
+		
+	}
+	
+	&_2 {
+		left: 45%;
+		bottom: 200px;
+	}
+	
+	&_3 {
+		bottom: 100px;
+	
+	}
+	
+	&_4 {
+		left: -100px;
+		bottom: 50%;
+	}
+	
+	&_5 {
+		right: 50px;
+		bottom: 10px;
+	}
+	
+	&_6 {
+		top: 800px;
+		right: 0;
+	}
+	
+	&_7 {
+		left: 0;
+		bottom: -1000px;
+	}
+}

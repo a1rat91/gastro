@@ -1,6 +1,6 @@
 $(document).ready(function () {
-
-	/* Popup
+	/* ========================================
+		Popup
 	======================================== */
 	window.globalPopup = new Popup();
 	
@@ -11,17 +11,17 @@ $(document).ready(function () {
 			globalPopup.html(response).show();
 		});
 	});
-	
-	/* Mobile menu
-======================================== */
+	/* ========================================
+		Mobile menu
+	======================================== */
 	$('#js-hamburger').click(function () {
 		
 		$(this).toggleClass('active');
 		$('.js-mobile-menu').toggleClass('active');
 		$('html, body').toggleClass('body-fixed')
 	});
-	
-	/* Main section Swiper
+	/* ========================================
+		Main section Swiper
 	======================================== */
 	var mainSwiper = new Swiper('.js-main-slider .swiper-container', {
 		speed: 1500,
@@ -58,12 +58,12 @@ $(document).ready(function () {
 		}
 	});
 	
-	$(window).resize(function(){
+	$(window).resize(function () {
 		
 		mainSwiper.update();
 	});
-
-	/* Tabs Swiper
+	/* ========================================
+		Tabs Swiper
 	======================================== */
 	var clientWidthTabs = document.documentElement.clientWidth;
 	if (clientWidthTabs > 767) {
@@ -89,16 +89,19 @@ $(document).ready(function () {
 		});
 	}
 	
-	/* Phone mask
+	/* ========================================
+		Phone mask
 	======================================== */
-
+	
 	$("[type=tel]").inputmask("(999) 999-99-99");
 	
-	/* All circles
+	/* ========================================
+		All circles
 	======================================== */
 	circles();
 	
-	/* Tabs + refresh circles
+	/* ========================================
+		Tabs + refresh circles
 	======================================== */
 	new Tabs({
 		calcbackFunc: function () {
@@ -106,11 +109,13 @@ $(document).ready(function () {
 		}
 	});
 	
-	/* Tooltip
+	/* ========================================
+	    Tooltip
 	======================================== */
 	var tooltip = new Tooltip('tooltip');
 	
-	/* Smoth scroll to section
+	/* ========================================
+	Smoth scroll to section
 	======================================== */
 	$(".js-anim-scroll").click(function (e) {
 		e.preventDefault();
@@ -141,22 +146,30 @@ $(document).ready(function () {
 		
 	});
 	
-	/* Cool animation with ScrollMagic and GSAP */
+	/*=========================================
+		Relax.js
+	===========================================*/
+	
+	var rellax = new Rellax('.js-rellax');
+	
+	/* ========================================
+	Cool animation with ScrollMagic and GSAP
+	===========================================*/
 	
 	var mapPinAnimate = new TimelineMax({repeat: -1, repeatDelay: 0, yoyo: true});
-
+	
 	mapPinAnimate
-		.fromTo('.map-pin',	1,
-			{delay: 0, yPercent﻿: -5, ease : Linear.easeInOut},
-			{yPercent﻿: -25, ease : Linear.easeInOut});
-
+		.fromTo('.map-pin', 1,
+			{delay: 0, yPercent﻿: -5, ease: Linear.easeInOut},
+			{yPercent﻿: -25, ease: Linear.easeInOut});
+	
 	var controller = new ScrollMagic.Controller();
 	var animateIn = new TimelineMax();
 	var aboutTitleRule = CSSRulePlugin.getRule(".about__title:before");
-
+	
 	animateIn
 		.to('.about__shadow', 0.5, {opacity: 1, ease: Linear.easeIn});
-
+	
 	var scene = new ScrollMagic.Scene({
 		triggerElement: "#js-about"
 	})
