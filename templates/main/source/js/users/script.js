@@ -190,5 +190,7 @@ $(document).ready(function () {
 		})
 		.addIndicators()
 		.setTween(indicatorsAnimation).addTo(indicatorsController);
+	
+	indicatordScene.reverse(false);
 });
 
