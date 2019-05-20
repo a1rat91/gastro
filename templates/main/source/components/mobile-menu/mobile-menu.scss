@@ -4,7 +4,7 @@
 	position: absolute;
 	min-height: 570px;
 	top: 0;
-	left: -1500px;
+	left: -100%;
 	width: 100%;
 	z-index: 10;
 	transition: 1s;
@@ -60,7 +60,7 @@
 		//margin-top: 30px;
 		font-size: 18px;
 		font-weight: 700;
-		margin-bottom: 70px;
+		margin-bottom: 55px;
 	}
 	
 	&__link {

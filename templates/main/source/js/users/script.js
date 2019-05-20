@@ -23,45 +23,38 @@ $(document).ready(function () {
 	/* ========================================
 		Main section Swiper
 	======================================== */
-	var mainSwiper = new Swiper('.js-main-slider .swiper-container', {
-		speed: 1500,
-		slidesPerView: 1,
-		parallax: true,
-		autoResize: false,
-		resizeReInit: true,
-		autoplay: {
-			delay: 200000,
-			disableOnInteraction: false,
-		},
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'fraction'
-		},
-		navigation: {
-			nextEl: '.js-main-slider-next',
-			prevEl: '.js-main-slider-prev'
-		},
-		breakpoints: {
-			
-			992: {
-				pagination: {
-					el: '.swiper-pagination',
-					type: 'bullets',
+	function mainSwiper() {
+		var mainSwiper = new Swiper('.js-main-slider .swiper-container', {
+			speed: 1500,
+			slidesPerView: 1,
+			parallax: true,
+			autoResize: false,
+			resizeReInit: true,
+			autoplay: {
+				delay: 200000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},
+			navigation: {
+				nextEl: '.js-main-slider-next',
+				prevEl: '.js-main-slider-prev'
+			},
+			breakpoints: {
+				
+				992: {
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'bullets',
+					}
 				}
 			}
-		},
-		on: {
-			resize: function () {
-				console.log(this, 'swiper resized');
-				this.update();
-			}
-		}
-	});
+		});
+	}
+	mainSwiper();
 	
-	$(window).resize(function () {
-		
-		mainSwiper.update();
-	});
 	/* ========================================
 		Tabs Swiper
 	======================================== */
@@ -101,11 +94,25 @@ $(document).ready(function () {
 	circles();
 	
 	/* ========================================
+		Charts animation Init
+	======================================== */
+	function chartsInit() {
+		// debugger
+		$('.indicators-charts__chart').addClass('active');
+		setTimeout(function () {
+			$('.indicators-charts__chart').removeClass('active');
+		}, 1500);
+	}
+	chartsInit();
+	
+	/* ========================================
 		Tabs + refresh circles
 	======================================== */
 	new Tabs({
 		calcbackFunc: function () {
 			circles();
+			chartsInit();
+			console.log($(this));
 		}
 	});
 	
@@ -119,6 +126,7 @@ $(document).ready(function () {
 	======================================== */
 	$(".js-anim-scroll").click(function (e) {
 		e.preventDefault();
+		e.stopPropagation();
 		
 		var offset = parseInt(this.getAttribute('data-offset')) || 90;
 		
@@ -150,9 +158,8 @@ $(document).ready(function () {
 		Fixed btn
 	===========================================*/
 	if (clientWidthTabs < 768) {
-		
 		var fixedBtn = $('#js-sticky-btn');
-		var startTarget = $('#js-about').offset().top + 50;
+		var startTarget = $('#js-about').offset().top + 200;
 		var finishTarget = $('#js-indicators').offset().top - 20;
 		
 		$(document).on("scroll", function () {
@@ -177,6 +184,7 @@ $(document).ready(function () {
 	Cool animation with ScrollMagic and GSAP
 	===========================================*/
 	
+	// Map pin animate
 	var mapPinAnimate = new TimelineMax({repeat: -1, repeatDelay: 0, yoyo: true});
 	
 	mapPinAnimate
@@ -184,9 +192,9 @@ $(document).ready(function () {
 			{delay: 0, yPercent﻿: -5, ease: Linear.easeInOut},
 			{yPercent﻿: -25, ease: Linear.easeInOut});
 	
+	// About section animate
 	var controller = new ScrollMagic.Controller();
 	var animateIn = new TimelineMax();
-	var aboutTitleRule = CSSRulePlugin.getRule(".about__title:before");
 	
 	animateIn
 		.to('.about__shadow', 0.5, {opacity: 1, ease: Linear.easeIn});
@@ -198,7 +206,7 @@ $(document).ready(function () {
 		.addIndicators()
 		.setTween(animateIn).addTo(controller);
 	
-	
+	// Indicators section animate
 	var indicatorsController = new ScrollMagic.Controller();
 	var indicatorsAnimation = new TimelineMax();
 	
@@ -206,12 +214,21 @@ $(document).ready(function () {
 		triggerElement: ".indicators__row"
 	})
 		.on('start', function () {
-			console.log("passed trigger");
 			circles();
+			chartsInit();
 		})
+		// .setClassToggle(".indicators-charts__chart", "active") // add class toggle
 		.addIndicators()
 		.setTween(indicatorsAnimation).addTo(indicatorsController);
 	
 	indicatordScene.reverse(false);
+	
+	/* ========================================
+	Reinit on window resize
+	===========================================*/
+	$(window).resize(function () {
+		
+		mainSwiper();
+	});
 });
 
