@@ -19,20 +19,29 @@
 		justify-content: center;
 		max-width: 320px;
 		margin: 0 auto 30px;
-		transition: .5s;
-		
-		&.hidden-tablet {
-			background: none;
-		}
+		transition: .3s;
+		background: $accent-color;
+		-webkit-transform: translateZ(0);
+		text-align: center;
+		position: fixed;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 300px;
+		z-index: 20;
+		opacity: 1;
+		font-size: 16px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 		
 		.sticky {
 			transition: top .5s;
 		}
 		
-		div {
-			text-align: center;
-			background: $accent-color!important;
-			-webkit-transform: translateZ(0);
+		&.hidden {
+			opacity: 0;
+			transition: opacity .3s;
+			pointer-events: none;
 		}
 	}
 	
