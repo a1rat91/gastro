@@ -147,6 +147,26 @@ $(document).ready(function () {
 	});
 	
 	/*=========================================
+		Fixed btn
+	===========================================*/
+	if (clientWidthTabs < 768) {
+		
+		var fixedBtn = $('#js-sticky-btn');
+		var startTarget = $('#js-about').offset().top + 50;
+		var finishTarget = $('#js-indicators').offset().top - 20;
+		
+		$(document).on("scroll", function () {
+			
+			var windowBottom = $(document).scrollTop() + $(window).height();
+			if (finishTarget <= windowBottom || windowBottom <= startTarget) {
+				fixedBtn.addClass('hidden');
+			} else {
+				fixedBtn.removeClass('hidden');
+			}
+		});
+	}
+	
+	/*=========================================
 		Relax.js
 	===========================================*/
 	if (clientWidthTabs > 992) {
