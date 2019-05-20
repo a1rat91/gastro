@@ -1,4 +1,10 @@
 $(document).ready(function () {
+	
+	/* ========================================
+		Global init clientWidth variable
+	======================================== */
+	var clientWidth = document.documentElement.clientWidth;
+	
 	/* ========================================
 		Popup
 	======================================== */
@@ -58,29 +64,31 @@ $(document).ready(function () {
 	/* ========================================
 		Tabs Swiper
 	======================================== */
-	var clientWidthTabs = document.documentElement.clientWidth;
-	if (clientWidthTabs > 767) {
-		var tabsMenuSwiper = new Swiper('.js-tabs-menu-slider', {
-			slidesPerView: 5,
-			slidesPerGroup: 1,
-			speed: 800,
-			spaceBetween: 30,
-			navigation: {
-				nextEl: '.js-tabs-menu-next',
-				prevEl: '.js-tabs-menu-prev'
-			},
-			breakpoints: {
-				1200: {
-					slidesPerView: 4,
-					spaceBetween: 30
+	function tabsSwiper() {
+		if (clientWidth > 767) {
+			var tabsMenuSwiper = new Swiper('.js-tabs-menu-slider', {
+				slidesPerView: 5,
+				slidesPerGroup: 1,
+				speed: 800,
+				spaceBetween: 30,
+				navigation: {
+					nextEl: '.js-tabs-menu-next',
+					prevEl: '.js-tabs-menu-prev'
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 34
+				breakpoints: {
+					1200: {
+						slidesPerView: 4,
+						spaceBetween: 30
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 34
+					}
 				}
-			}
-		});
+			});
+		}
 	}
+	tabsSwiper();
 	
 	/* ========================================
 		Phone mask
@@ -157,7 +165,7 @@ $(document).ready(function () {
 	/*=========================================
 		Fixed btn
 	===========================================*/
-	if (clientWidthTabs < 768) {
+	if (clientWidth < 768) {
 		var fixedBtn = $('#js-sticky-btn');
 		var startTarget = $('#js-about').offset().top + 200;
 		var finishTarget = $('#js-indicators').offset().top - 20;
@@ -176,7 +184,7 @@ $(document).ready(function () {
 	/*=========================================
 		Relax.js
 	===========================================*/
-	if (clientWidthTabs > 992) {
+	if (clientWidth > 992) {
 		var rellax = new Rellax('.js-rellax');
 	}
 	
@@ -203,7 +211,7 @@ $(document).ready(function () {
 		triggerElement: "#js-about"
 	})
 		.setClassToggle(".about__title", "active") // add class toggle
-		.addIndicators()
+		// .addIndicators()
 		.setTween(animateIn).addTo(controller);
 	
 	// Indicators section animate
@@ -218,7 +226,7 @@ $(document).ready(function () {
 			chartsInit();
 		})
 		// .setClassToggle(".indicators-charts__chart", "active") // add class toggle
-		.addIndicators()
+		// .addIndicators()
 		.setTween(indicatorsAnimation).addTo(indicatorsController);
 	
 	indicatordScene.reverse(false);
@@ -229,6 +237,7 @@ $(document).ready(function () {
 	$(window).resize(function () {
 		
 		mainSwiper();
+		tabsSwiper();
 	});
 });
 

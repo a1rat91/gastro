@@ -7,16 +7,9 @@ var imageminSvgo = require('imagemin-svgo');
 var mqPacker = require('css-mqpacker');
 var plugins = gulpLoadPlugins();
 var browserSync = require('browser-sync').create();
-const ghPages = require('gh-pages');
-const path = require('path');
 
 var args = require('yargs').argv;
 var config = require('./' + (args.template ? args.template : 'main') + '.config.json').config;
-
-function deploy(cb) {
-	ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
 
 var configWebserver = {
 	server: {
