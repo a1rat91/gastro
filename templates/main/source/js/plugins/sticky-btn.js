@@ -4,6 +4,7 @@
 	if (clientWidth < 768) {
 		
 		var mainSection = document.querySelector('#js-main-section'),
+			// winH = 10;
 			winH = window.document.documentElement.clientHeight - 50;
 		
 		var a = document.querySelector('#js-sticky-btn'),
@@ -14,7 +15,7 @@
 		$(window).scroll(function(){
 			var st = $(this).scrollTop();
 			if (st > scrollPos){
-				P = winH - 50; //down
+				P = winH; //down
 			} else {
 				P = winH; //up
 			}

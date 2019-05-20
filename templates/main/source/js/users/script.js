@@ -149,8 +149,9 @@ $(document).ready(function () {
 	/*=========================================
 		Relax.js
 	===========================================*/
-	
-	var rellax = new Rellax('.js-rellax');
+	if (clientWidthTabs > 992) {
+		var rellax = new Rellax('.js-rellax');
+	}
 	
 	/* ========================================
 	Cool animation with ScrollMagic and GSAP

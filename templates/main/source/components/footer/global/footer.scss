@@ -123,6 +123,7 @@
 			&_mail,
 			&_phone {
 				margin: 0;
+				margin-top: -50px;
 			}
 		}
 		
@@ -142,6 +143,14 @@
 			&_email {
 				right: 0;
 				background: url(../images/mail.svg);
+			}
+			
+			&:before {
+				display: none;
+			}
+			
+			.footer__col_phone & {
+				top: -60px;
 			}
 		}
 		
@@ -166,6 +175,15 @@
 		
 		&__develop {
 			text-align: center;
+		}
+		
+		&__col {
+			width: auto;
+			
+			&_phone,
+			&_mail {
+				margin-top: -50px;
+			}
 		}
 		
 		&__col_soc {

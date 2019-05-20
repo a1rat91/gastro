@@ -37,4 +37,8 @@
 		left: 0;
 		bottom: -1000px;
 	}
+	
+	@media all and (max-width: $screen-lg) {
+		display: none;
+	}
 }
