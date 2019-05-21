@@ -37,7 +37,7 @@ $(document).ready(function () {
 			autoResize: false,
 			resizeReInit: true,
 			autoplay: {
-				delay: 200000,
+				delay: 3000,
 				disableOnInteraction: false,
 			},
 			pagination: {

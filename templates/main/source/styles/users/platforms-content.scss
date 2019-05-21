@@ -70,6 +70,7 @@
 		font-size: 18px;
 		width: 40px;
 		height: 40px;
+		min-width: 40px;
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -100,7 +101,7 @@
 	}
 	
 	&__text {
-		max-width: 220px;
+		//max-width: 220px;
 	}
 	
 	&__indicator-row {
