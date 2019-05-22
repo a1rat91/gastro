@@ -120,7 +120,6 @@ $(document).ready(function () {
 		calcbackFunc: function () {
 			circles();
 			chartsInit();
-			console.log($(this));
 		}
 	});
 	

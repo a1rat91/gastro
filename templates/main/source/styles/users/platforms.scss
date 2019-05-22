@@ -40,11 +40,6 @@
 		&__section {
 			padding-bottom: 30px;
 		}
-		
-		&__form {
-			margin-left: -20px;
-			margin-right: -20px;
-		}
 	}
 	
 	@media all and (max-width: $screen-lg) {
@@ -55,10 +50,29 @@
 	
 	@media all and (max-width: $screen-md) {
 		padding-top: 40px;
+		
+		&__form {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
 	}
 	
 	@media all and (max-width: $screen-sm) {
 		padding-top: 53px;
+		
+		&__section {
+			padding-bottom: 40px;
+		}
+		
+		&__form {
+			background: transparent;
+			padding-bottom: 0;
+		}
+		
+		&__form-title {
+			color: #323232;
+			font-size: 22px;
+		}
 		
 		&__section {
 			padding-bottom: 40px;
