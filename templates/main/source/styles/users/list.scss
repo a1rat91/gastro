@@ -1,0 +1,23 @@
+.list {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px;
+	
+	&__item {
+		list-style: none;
+		padding-left: 18px;
+		position: relative;
+		
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: $accent-color;
+			top: 8px;
+			left: 0;
+		}
+	}
+}

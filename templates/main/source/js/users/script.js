@@ -229,6 +229,13 @@ $(document).ready(function () {
 		.setTween(indicatorsAnimation).addTo(indicatorsController);
 	
 	indicatordScene.reverse(false);
+
+    /* ========================================
+        Tooltip
+    ======================================== */
+
+    var indicatorVal = $('.indicators-charts__val');
+    console.log(indicatorVal.parent());
 	
 	/* ========================================
 	Reinit on window resize

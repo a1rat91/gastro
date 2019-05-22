@@ -18,7 +18,7 @@
 		width: 45%;
 		
 		.platforms-content_mail & {
-			width: 50%;
+			width: 60%;
 		}
 		
 	}
@@ -28,8 +28,8 @@
 		position: relative;
 		
 		.platforms-content_mail & {
-			margin-top: -50px;
-			width: 50%;
+			margin-top: -40px;
+			width: 40%;
 		}
 	}
 	
@@ -99,6 +99,8 @@
 	
 	&__sub-title {
 		margin-bottom: 20px;
+		font-weight: 800;
+		color: #000000;
 	}
 	
 	&__text {
@@ -114,6 +116,15 @@
 	&__indicator {
 		margin-left: 33px;
 		margin-right: 33px;
+	}
+	
+	&__row {
+		display: flex;
+	}
+	
+	&__col {
+		width: 50%;
+		padding-right: 15px;
 	}
 	
 	@media all and (max-width: $screen-xl) {
