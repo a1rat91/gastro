@@ -2,7 +2,6 @@
 	background: #ffffff;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 	
-	
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
@@ -11,6 +10,7 @@
 		
 		.platforms-content_mail & {
 			padding-bottom: 30px;
+			padding-top: 40px;
 		}
 	}
 	
@@ -28,7 +28,6 @@
 		position: relative;
 		
 		.platforms-content_mail & {
-			margin-top: -40px;
 			width: 40%;
 		}
 	}
@@ -120,6 +119,7 @@
 	
 	&__row {
 		display: flex;
+		margin-bottom: 20px;
 	}
 	
 	&__col {
@@ -134,8 +134,13 @@
 	
 	@media all and (max-width: $screen-lg) {
 		
+		&__title {
+			.platforms-content_mail & {
+				text-align: left;
+			}
+		}
 		&__inner {
-			flex-direction: column;
+			//flex-direction: column;
 			padding: 30px 40px;
 		}
 		
@@ -143,6 +148,10 @@
 		&__pic-wrap {
 			width: 100%;
 			text-align: center;
+			
+			.platforms-content_mail & {
+				//width: 100%;
+			}
 		}
 		
 		&__list {
@@ -174,6 +183,35 @@
 		&__pic {
 			left: 50%;
 			transform: translateX(-50%);
+			
+			.platforms-content_mail & {
+				position: relative;
+				left: 0;
+				transform: translateX(0);
+				margin-top: 30px;
+				width: 100%;
+			}
+		}
+		
+		&__row {
+			.platforms-content_mail & {
+				//flex-direction: column;
+				text-align: left;
+			}
+		}
+	}
+	
+	@media all and (max-width: 900px) {
+		&__pic-wrap {
+			.platforms-content_mail & {
+				width: 33%;
+			}
+		}
+		
+		&__content {
+			.platforms-content_mail & {
+				width: 67%;
+			}
 		}
 	}
 	
@@ -185,6 +223,23 @@
 			padding-left: 0;
 			padding-right: 0;
 			
+			.platforms-content_mail & {
+				flex-direction: column;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+		}
+		
+		&__content,
+		&__pic-wrap {
+			.platforms-content_mail & {
+				width: 100%;
+			}
+		}
+		
+		&__pic-wrap {
+			max-width: 235px;
+			margin: 0 auto;
 		}
 		
 		&__pic-bg {
@@ -197,6 +252,28 @@
 		
 		&__item {
 			width: 50%;
+		}
+		
+		&__indicator-row {
+			background: #ffffff;
+			margin: 0;
+			padding: 30px;
+			border-radius: 5px;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		&__indicator:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		
+		&__row {
+			flex-direction: column;
+		}
+		
+		&__col {
+			width: 100%;
+			padding: 0;
 		}
 	}
 	

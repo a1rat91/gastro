@@ -9,16 +9,20 @@
 		<div class="form__input-wrap">
 			<span class="form__input-tel">+7 |</span>
 			<!-- /.form__input-tel -->
-			<input name="phone" title="Заполните телефон" tabindex="1" confirminfo=".response" type="tel" class="form__input input Y-required" required="required">
+			<input type="tel" name="phone" title="Заполните телефон" class="form__input input Y-required" placeholder="" tabindex="2" confirminfo=".response" required="required">
 			<!-- /.form__input -->
 		</div>
 		<!-- /.form__input-wrap -->
 
-		<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="">
-		<button class="form__btn btn" type="submit">Заказать</button>
-		<!-- /.form__btn btn -->
+		<input name="message" title="Наименование формы" class="Y-required hidden" tabindex="3" confirminfo=".response" value="Форма из модального окна">
+		<button class="form__btn btn" type="submit" name="submitbtn" tabindex="4" value="Отправить">Получить консультацию</button>
+		<div class="response"></div>
 	</form>
 	<!-- /.form .form_ -->
+
+	<script>
+		$("[type=tel]").inputmask("(999) 999-99-99");
+	</script>
 
 </div>
 <!-- /.callback-popup -->
