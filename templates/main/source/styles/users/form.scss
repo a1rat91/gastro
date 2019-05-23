@@ -89,6 +89,10 @@
 		
 		flex-direction: column;
 		
+		&__input {
+			padding-right: 15px;
+		}
+		
 		&__btn {
 			position: relative;
 			width: 100%;

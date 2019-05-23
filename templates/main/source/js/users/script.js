@@ -234,16 +234,6 @@ $(document).ready(function () {
     indicatordScene.reverse(false);
 
     /* ========================================
-        Tooltip
-    ======================================== */
-    var indicatorItem = $('.indicators-charts__row'),
-        indicatorVal = $('.indicators-charts__val');
-
-    indicatorItem.each(function () {
-        console.log($(this).find(indicatorVal.text))
-    });
-
-    /* ========================================
     Reinit on window resize
     ===========================================*/
     $(window).resize(function () {

@@ -1,6 +1,10 @@
 .thanks-popup {
 	padding: 90px 55px 70px;
 	text-align: center;
+	min-height: 427px;
+	display: flex!important;
+	justify-content: center;
+	align-items: center;
 	
 	&__title {
 		font-size: 30px;
@@ -9,14 +13,23 @@
 	&__text {
 		max-width: 447px;
 		margin: 0 auto 35px;
-		font-size: 18px;
+		font-size: 22px;
 	}
 	
 	@media all and (max-width: $screen-md) {
 		padding: 90px 40px 70px;
+		
+		&__text {
+			font-size: 20px;
+		}
 	}
 	
 	@media all and (max-width: $screen-sm) {
-		padding: 60px 20px 47px;
+		padding: 80px 20px 47px;
+		min-height: 200px;
+		
+		&__text {
+			font-size: 16px;
+		}
 	}
 }
