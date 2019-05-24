@@ -1,8 +1,8 @@
 .main-slider {
-	max-width: 431px;
+	max-width: 473px;
 	position: absolute;
-	top: -49px;
-	left: 58px;
+	top: -48px;
+	left: 64px;
 	
 	&__img {
 		@include img-responsive()
@@ -24,7 +24,7 @@
 		position: absolute;
 		right: 55px;
 		text-align: right;
-		bottom: 300px;
+		bottom: 335px;
 		font-size: 14px;
 	}
 	

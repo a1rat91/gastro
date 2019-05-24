@@ -7,12 +7,12 @@
 		margin-bottom: 60px;
 	}
 	
-	&__left,
-	&__right {
-		width: 50%;
+	&__left{
+		flex-grow: 1;
 	}
 	
 	&__right {
+		min-width: 600px;
 		padding-top: 32px;
 	}
 	
@@ -59,7 +59,7 @@
 	
 	&__slider-bg {
 		
-		width: 548px;
+		width: 600px;
 		
 		img {
 			@include img-responsive();
@@ -69,13 +69,14 @@
 		&:after {
 			content: '';
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: 33px;
+			height: 23px;
 			position: absolute;
 			top: 0;
-			background: url("../images/border.png");
+			background: url("../images/border.png") no-repeat center;
 			left: 50px;
 			z-index: 4;
+			background-size: contain;
 		}
 		
 		&:after {
@@ -112,6 +113,10 @@
 		
 		&__title-wrap {
 			margin-bottom: 35px;
+		}
+		
+		&__right {
+			min-width: auto;
 		}
 		
 		&__slider-bg {
