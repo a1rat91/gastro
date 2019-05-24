@@ -43,13 +43,13 @@
 							<div class="main-section__slider">
 								
 								<div class="main-section__slider-bg">
-									<img src="{{src}}main-slider-bg.png" alt="">
+									<img class="lazyload" src="{{src}}main-slider-bg.png" alt="">
 								</div>
 								
 								{% include 'main-slider/main-slider.html' %}
 								
 								<div class="main-section__shadow">
-									<img src="{{src}}shadow.svg" alt="">
+									<img class="lazyload" src="{{src}}shadow.svg" alt="">
 								</div>
 								<!-- /.main-section__shadow -->
 							</div>
@@ -58,13 +58,13 @@
 						<!-- /.main-section__right -->
 						
 						<div class="decor decor_1 js-rellax" data-rellax-speed="1">
-							<img src="{{src}}decor-1.png" alt="">
+							<img class="lazyload" src="{{src}}decor-1.png" alt="">
 						</div>
 						<div class="decor decor_2 js-rellax" data-rellax-speed="2">
-							<img src="{{src}}decor-2.png" alt="">
+							<img class="lazyload" src="{{src}}decor-2.png" alt="">
 						</div>
 						<div class="decor decor_3 js-rellax" data-rellax-speed="7">
-							<img src="{{src}}decor-3.png" alt="">
+							<img class="lazyload" src="{{src}}decor-3.png" alt="">
 						</div>
 					</div>
 					<!-- /.main-section -->
@@ -234,10 +234,10 @@
 						<!-- /.about-numbs -->
 						
 						<div class="decor decor_4 js-rellax" data-rellax-speed="3">
-							<img src="{{src}}decor-4.png" alt="">
+							<img class="lazyload" src="{{src}}decor-4.png" alt="">
 						</div>
 						<div class="decor decor_5 js-rellax" data-rellax-speed="1">
-							<img src="{{src}}decor-5.png" alt="">
+							<img class="lazyload" src="{{src}}decor-5.png" alt="">
 						</div>
 					</div>
 					<!-- /#about.about -->
@@ -305,7 +305,7 @@
 								<div
 									class="swiper-button-prev js-tabs-menu-prev tabs-menu-prev swiper-button-disabled">
 									<div class="slider__btn slider__btn_next">
-										<svg width="21" height="14" viewBox="0 0 21 14" fill="none"
+										<svg class="lazyload" width="21" height="14" viewBox="0 0 21 14" fill="none"
 										     xmlns="http://www.w3.org/2000/svg">
 											<path
 												d="M18.9869 7.17188L13.0743 1.3686M18.9869 7.17188L13.2997 12.9692M18.9869 7.17188L0.0147315 7.35128"
@@ -316,7 +316,7 @@
 								</div>
 								<div class="swiper-button-next js-tabs-menu-next tabs-menu__next">
 									<div class="slider__btn slider__btn_prev">
-										<svg width="21" height="14" viewBox="0 0 21 14" fill="none"
+										<svg class="lazyload" width="21" height="14" viewBox="0 0 21 14" fill="none"
 										     xmlns="http://www.w3.org/2000/svg">
 											<path
 												d="M18.9869 7.17188L13.0743 1.3686M18.9869 7.17188L13.2997 12.9692M18.9869 7.17188L0.0147315 7.35128"
@@ -1785,13 +1785,13 @@
 												<!-- /.platforms-content__content -->
 												<div class="platforms-content__pic-wrap">
 													<div class="platforms-content__pic-bg">
-														<img src="{{src}}main-slider-bg.png" alt="">
+														<img class="lazyload" src="{{src}}main-slider-bg.png" alt="">
 													</div>
 													<div class="platforms-content__pic">
 														<a data-fancybox="gallery" href="{{src}}main-slider-max-1.jpg"
-														   data-caption="Рекламный баннер">
+														   data-caption="Баннер на главной странице">
 															<img src="{{src}}main-slider-1.jpg" alt=""
-															     class="platforms-content__img">
+															     class="platforms-content__img lazyload">
 														</a>
 													</div>
 													<!-- /.platforms-content__pic -->
@@ -1879,13 +1879,13 @@
 												<!-- /.platforms-content__content -->
 												<div class="platforms-content__pic-wrap">
 													<div class="platforms-content__pic-bg">
-														<img src="{{src}}main-slider-bg.png" alt="">
+														<img class="lazyload" src="{{src}}main-slider-bg.png" alt="">
 													</div>
 													<div class="platforms-content__pic">
 														<a data-fancybox="gallery2" href="{{src}}main-slider-max-2.jpg"
-														   data-caption="Рекламный баннер 2">
+														   data-caption="Продвигаем товар в каталоге">
 															<img src="{{src}}main-slider-2.jpg" alt=""
-															     class="platforms-content__img">
+															     class="platforms-content__img lazyload">
 														</a>
 													</div>
 													<!-- /.platforms-content__pic -->
@@ -1960,13 +1960,13 @@
 												<!-- /.platforms-content__content -->
 												<div class="platforms-content__pic-wrap">
 													<div class="platforms-content__pic-bg">
-														<img src="{{src}}main-slider-bg.png" alt="">
+														<img class="lazyload" src="{{src}}main-slider-bg.png" alt="">
 													</div>
 													<div class="platforms-content__pic">
-														<a data-fancybox="gallery3" href="{{src}}main-slider-max-3.jpg"
-														   data-caption="Рекламный баннер 3">
-															<img src="{{src}}main-slider-3.jpg" alt=""
-															     class="platforms-content__img">
+														<a data-fancybox="gallery3" href="{{src}}main-slider-max-4.jpg"
+														   data-caption="Реклама в разделе «красные ценники»">
+															<img src="{{src}}main-slider-4.jpg" alt=""
+															     class="platforms-content__img lazyload">
 														</a>
 													</div>
 													<!-- /.platforms-content__pic -->
@@ -2035,20 +2035,19 @@
 															<!-- /.platforms-content__text -->
 														</li>
 														<!-- /.platforms-content__item -->
-													
 													</ul>
 													<!-- /.platforms-content__list -->
 												</div>
 												<!-- /.platforms-content__content -->
 												<div class="platforms-content__pic-wrap">
 													<div class="platforms-content__pic-bg">
-														<img src="{{src}}main-slider-bg.png" alt="">
+														<img class="lazyload" src="{{src}}main-slider-bg.png" alt="">
 													</div>
 													<div class="platforms-content__pic">
-														<a data-fancybox="gallery4" href="{{src}}main-slider-max-4.jpg"
-														   data-caption="Рекламный баннер 4">
-															<img src="{{src}}main-slider-4.jpg" alt=""
-															     class="platforms-content__img">
+														<a data-fancybox="gallery4" href="{{src}}main-slider-max-5.jpg"
+														   data-caption="Баннеры в разделе Специальные Предолжения">
+															<img src="{{src}}main-slider-5.jpg" alt=""
+															     class="platforms-content__img lazyload">
 														</a>
 													</div>
 													<!-- /.platforms-content__pic -->
@@ -2166,10 +2165,10 @@
 												<!-- /.platforms-content__content -->
 												<div class="platforms-content__pic-wrap">
 													<div class="platforms-content__pic">
-														<a data-fancybox="gallery5" href="{{src}}mail-platform.jpg"
-														   data-caption="Рекламный баннер">
+														<a data-fancybox="gallery5" href="{{src}}main-slider-max-6.jpg"
+														   data-caption="Рекламная e-mail рассылка">
 															<img src="{{src}}mail-platform.jpg" alt=""
-															     class="platforms-content__img">
+															     class="platforms-content__img lazyload">
 														</a>
 													</div>
 													<!-- /.platforms-content__pic -->
@@ -2220,7 +2219,7 @@
 									<li class="partners__item">
 										<div class="partners__pic">
 											<a href="#" target="_blank" class="partners__link">
-												<img src="{{src}}partner-1.svg" alt="" class="partners__img">
+												<img src="{{src}}partner-1.svg" alt="" class="partners__img lazyload">
 												<!-- /.partners__img -->
 											</a>
 											<!-- /.partners__link -->
@@ -2231,7 +2230,7 @@
 									<li class="partners__item">
 										<div class="partners__pic">
 											<a href="#" target="_blank" class="partners__link">
-												<img src="{{src}}partner-2.svg" alt="" class="partners__img">
+												<img src="{{src}}partner-2.svg" alt="" class="partners__img lazyload">
 												<!-- /.partners__img -->
 											</a>
 											<!-- /.partners__link -->

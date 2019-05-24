@@ -20,6 +20,13 @@
 	&_ie10 {
 		display: none;
 	}
+	
+	&_iphone {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+	}
 
 	&_dopclass {
 		position: absolute;

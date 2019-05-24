@@ -238,8 +238,12 @@
 		}
 		
 		&__pic-wrap {
-			max-width: 235px;
+			
 			margin: 0 auto;
+			
+			.platforms-content_mail & {
+				max-width: 235px;
+			}
 		}
 		
 		&__pic-bg {

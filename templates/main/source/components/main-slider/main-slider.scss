@@ -71,5 +71,9 @@
 	
 	@media all and (max-width: $screen-sm) {
 		width: 228px;
+		
+		&__slide-desc {
+			bottom: 166px;
+		}
 	}
 }
